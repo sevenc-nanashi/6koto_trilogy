@@ -1,0 +1,22 @@
+{
+  "name": "objects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.2",
+  "dependencies": {
+    "@tonejs/midi": "^2.0.28",
+    "midi-file": "^1.2.4",
+    "vi5": "link:E:/aviutl2/vi5.aux2/packages/vi5"
+  },
+  "devDependencies": {
+    "p5": "^2.2.1",
+    "vite": "^7.3.1"
+  }
+}
