@@ -5,7 +5,7 @@ export function currentFrameInfo(ctx: Vi5Context): {
   measure: number;
   ticks: number;
 } {
-  const ticks = midi.header.secondsToTicks(ctx.frameInfo.currentTime);
+  const ticks = midi.header.secondsToTicks(ctx.frameInfo.globalTime);
   const measure = midi.header.ticksToMeasures(ticks);
   return { measure, ticks };
 }

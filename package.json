@@ -13,6 +13,7 @@
   "dependencies": {
     "@tonejs/midi": "^2.0.28",
     "midi-file": "^1.2.4",
+    "ts-pattern": "^5.9.0",
     "vi5": "link:E:/aviutl2/vi5.aux2/packages/vi5"
   },
   "devDependencies": {

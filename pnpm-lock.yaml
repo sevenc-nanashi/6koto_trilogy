@@ -14,6 +14,9 @@ importers:
       midi-file:
         specifier: ^1.2.4
         version: 1.2.4
+      ts-pattern:
+        specifier: ^5.9.0
+        version: 5.9.0
       vi5:
         specifier: link:E:/aviutl2/vi5.aux2/packages/vi5
         version: link:../../../aviutl2/vi5.aux2/packages/vi5
@@ -446,6 +449,9 @@ packages:
     resolution: {integrity: sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==}
     engines: {node: '>=12.0.0'}
 
+  ts-pattern@5.9.0:
+    resolution: {integrity: sha512-6s5V71mX8qBUmlgbrfL33xDUwO0fq48rxAu2LBE11WBeGdpCPOsXksQbZJHvHwhrd3QjUusd3mAOM5Gg0mFBLg==}
+
   vite@7.3.1:
     resolution: {integrity: sha512-w+N7Hifpc3gRjZ63vYBXA56dvvRlNWRczTdmCBBa+CotUzAPf5b7YMdMR/8CQoeYE5LX3W4wj6RYTgonm1b9DA==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -803,6 +809,8 @@ snapshots:
     dependencies:
       fdir: 6.5.0(picomatch@4.0.3)
       picomatch: 4.0.3
+
+  ts-pattern@5.9.0: {}
 
   vite@7.3.1:
     dependencies:
