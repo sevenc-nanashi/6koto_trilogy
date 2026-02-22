@@ -5,33 +5,43 @@ import aoiFootUrl from "../assets/aoi_foot.png";
 import aoiEyeClosedUrl from "../assets/aoi_eye_closed.png";
 import aoiEyeOpenUrl from "../assets/aoi_eye_open.png";
 import aoiHeadUrl from "../assets/aoi_head.png";
-import p5 from "p5";
+import aoiMouthAUrl from "../assets/aoi_mouth_a.png";
+import aoiMouthEUrl from "../assets/aoi_mouth_e.png";
+import aoiMouthIUrl from "../assets/aoi_mouth_i.png";
+import aoiMouthNUrl from "../assets/aoi_mouth_n.png";
+import aoiMouthOUrl from "../assets/aoi_mouth_o.png";
+import aoiMouthUUrl from "../assets/aoi_mouth_u.png";
 import { currentFrameInfo } from "../utils/currentFrameInfo";
-import { useRenderingContext } from "../utils/useRenderingContext";
 import lab from "../assets/ao.lab?raw";
+import kotoLab from "../assets/koto_aoi.lab?raw";
+import {
+  drawSwingCharacter,
+  loadSwingCharacterImages,
+  parseLabEntries,
+  SwingCharacterImages,
+  SwingCharacterImageSetUrls,
+} from "./swingCharacter";
 
-let aoiBody: p5.Image;
-let aoiBody2: p5.Image;
-let aoiFoot: p5.Image;
-let aoiEyeClosed: p5.Image;
-let aoiEyeOpen: p5.Image;
-let aoiHead: p5.Image;
+let aoiImages: SwingCharacterImages;
 
-const aoiMouthUrls = import.meta.glob<string>("../assets/aoi_mouth_*.png", {
-  eager: true,
-  import: "default",
-  query: "?url",
-});
-const aoiMouths: Record<string, p5.Image> = {};
-
-const labEntries = lab
-  .split("\n")
-  .map((line) => line.trim().split(" ") as [string, string, string])
-  .map(([start100ns, end100ns, label]) => ({
-    start: parseInt(start100ns) / 1e7,
-    end: parseInt(end100ns) / 1e7,
-    label,
-  }));
+const aoiImageSetUrls: SwingCharacterImageSetUrls = {
+  body: aoiBodyUrl,
+  body2: aoiBody2Url,
+  foot: aoiFootUrl,
+  eyeClosed: aoiEyeClosedUrl,
+  eyeOpen: aoiEyeOpenUrl,
+  head: aoiHeadUrl,
+  mouths: {
+    a: aoiMouthAUrl,
+    i: aoiMouthIUrl,
+    u: aoiMouthUUrl,
+    e: aoiMouthEUrl,
+    o: aoiMouthOUrl,
+    n: aoiMouthNUrl,
+  },
+};
+const labEntries = parseLabEntries(lab);
+const kotoLabEntries = parseLabEntries(kotoLab);
 
 export default defineObject({
   id: "aoi-body",
@@ -52,6 +62,14 @@ export default defineObject({
       min: 0,
       max: 1,
       step: numberStep["0.001"],
+    },
+    swingMeasureFactor: {
+      type: "number",
+      label: "Swing Measure Factor",
+      default: 4,
+      min: 0,
+      max: 16,
+      step: numberStep["1"],
     },
     swingOverride: {
       type: "number",
@@ -77,65 +95,40 @@ export default defineObject({
       max: 1,
       step: numberStep["1"],
     },
+    koto: {
+      type: "boolean",
+      label: "Koto Mode",
+      default: false,
+    },
+    shut: {
+      type: "number",
+      label: "Shut",
+      default: 0,
+      min: 0,
+      max: 1,
+      step: numberStep["1"],
+    },
   } as const,
   async setup(ctx, p, params) {
-    [aoiBody, aoiBody2, aoiFoot, aoiEyeClosed, aoiEyeOpen, aoiHead] =
-      await Promise.all([
-        p.loadImage(aoiBodyUrl),
-        p.loadImage(aoiBody2Url),
-        p.loadImage(aoiFootUrl),
-        p.loadImage(aoiEyeClosedUrl),
-        p.loadImage(aoiEyeOpenUrl),
-        p.loadImage(aoiHeadUrl),
-      ]);
-    for (const [key, url] of Object.entries(aoiMouthUrls)) {
-      const match = key.match(/aoi_mouth_(.)\.png/);
-      if (match) {
-        aoiMouths[match[1]] = await p.loadImage(url);
-      }
-    }
+    aoiImages = await loadSwingCharacterImages(p, aoiImageSetUrls);
     return ctx.createCanvas(30, 60);
   },
   draw(ctx, p, params) {
     const frame = currentFrameInfo(ctx);
-    p.clear();
-    p.resetMatrix();
-    p.noSmooth();
-    p.image(aoiFoot, 0, 0);
-
-    {
-      using _ = useRenderingContext(p);
-      const bodyShift = (
-        params.swingOverride !== -1
-          ? params.swingOverride === 1
-          : (frame.measure * 4) % 1 >= params.swingInterval
-      )
-        ? 0
-        : params.swing;
-      p.translate(0, bodyShift);
-      const bodyImage =
-        params.bodySwing === -1
-          ? ((frame.measure * 4) % 1) - params.swingInterval / 4 >=
-            params.swingInterval
-            ? aoiBody
-            : aoiBody2
-          : params.bodySwing === 1
-            ? aoiBody2
-            : aoiBody;
-      p.image(bodyImage, 0, 0);
-      p.image(aoiHead, 0, 0);
-      p.image(params.eye >= 0.5 ? aoiEyeOpen : aoiEyeClosed, 0, 0);
-      const labEntry = labEntries.find(
-        (entry) =>
-          ctx.frameInfo.globalTime >= entry.start &&
-          ctx.frameInfo.globalTime < entry.end,
-      );
-      if (labEntry && aoiMouths[labEntry.label]) {
-        const mouth = aoiMouths[labEntry.label];
-        p.image(mouth, 0, 0);
-      } else {
-        p.image(aoiMouths["n"]!, 0, 0);
-      }
-    }
+    drawSwingCharacter(p, {
+      frameMeasure: frame.measure,
+      globalTime: ctx.frameInfo.globalTime,
+      swing: params.swing,
+      swingInterval: params.swingInterval,
+      swingMeasureFactor: params.swingMeasureFactor,
+      swingOverride: params.swingOverride,
+      bodySwing: params.bodySwing,
+      eye: params.eye,
+      eyeOffsetX: 0,
+      mouthOffsetX: 0,
+      images: aoiImages,
+      labEntries: params.koto ? kotoLabEntries : labEntries,
+      shut: params.shut,
+    });
   },
 });

@@ -5,33 +5,44 @@ import akaneFootUrl from "../assets/akane_foot.png";
 import akaneEyeClosedUrl from "../assets/aoi_eye_closed.png";
 import akaneEyeOpenUrl from "../assets/aoi_eye_open.png";
 import akaneHeadUrl from "../assets/akane_head.png";
-import p5 from "p5";
+import akaneMouthAUrl from "../assets/aoi_mouth_a.png";
+import akaneMouthEUrl from "../assets/aoi_mouth_e.png";
+import akaneMouthIUrl from "../assets/aoi_mouth_i.png";
+import akaneMouthNUrl from "../assets/aoi_mouth_n.png";
+import akaneMouthOUrl from "../assets/aoi_mouth_o.png";
+import akaneMouthUUrl from "../assets/aoi_mouth_u.png";
 import { currentFrameInfo } from "../utils/currentFrameInfo";
-import { useRenderingContext } from "../utils/useRenderingContext";
 import lab from "../assets/aka.lab?raw";
+import kotoLab from "../assets/koto_aka.lab?raw";
+import {
+  drawSwingCharacter,
+  loadSwingCharacterImages,
+  parseLabEntries,
+  SwingCharacterImages,
+  SwingCharacterImageSetUrls,
+} from "./swingCharacter";
 
-let akaneBody: p5.Image;
-let akaneBody2: p5.Image;
-let akaneFoot: p5.Image;
-let akaneEyeClosed: p5.Image;
-let akaneEyeOpen: p5.Image;
-let akaneHead: p5.Image;
+let akaneImages: SwingCharacterImages;
 
-const akaneMouthUrls = import.meta.glob<string>("../assets/aoi_mouth_*.png", {
-  eager: true,
-  import: "default",
-  query: "?url",
-});
-const akaneMouths: Record<string, p5.Image> = {};
-
-const labEntries = lab
-  .split("\n")
-  .map((line) => line.trim().split(" ") as [string, string, string])
-  .map(([start100ns, end100ns, label]) => ({
-    start: parseInt(start100ns) / 1e7,
-    end: parseInt(end100ns) / 1e7,
-    label,
-  }));
+// 別画像セットを使う場合は、このURL定義を差し替える。
+const akaneImageSetUrls: SwingCharacterImageSetUrls = {
+  body: akaneBodyUrl,
+  body2: akaneBody2Url,
+  foot: akaneFootUrl,
+  eyeClosed: akaneEyeClosedUrl,
+  eyeOpen: akaneEyeOpenUrl,
+  head: akaneHeadUrl,
+  mouths: {
+    a: akaneMouthAUrl,
+    i: akaneMouthIUrl,
+    u: akaneMouthUUrl,
+    e: akaneMouthEUrl,
+    o: akaneMouthOUrl,
+    n: akaneMouthNUrl,
+  },
+};
+const labEntries = parseLabEntries(lab);
+const kotoLabEntries = parseLabEntries(kotoLab);
 
 export default defineObject({
   id: "akane-body",
@@ -85,73 +96,40 @@ export default defineObject({
       max: 1,
       step: numberStep["1"],
     },
+    koto: {
+      type: "boolean",
+      label: "Koto Mode",
+      default: false,
+    },
+    shut: {
+      type: "number",
+      label: "Shut",
+      default: 0,
+      min: 0,
+      max: 1,
+      step: numberStep["1"],
+    },
   } as const,
   async setup(ctx, p, params) {
-    [
-      akaneBody,
-      akaneBody2,
-      akaneFoot,
-      akaneEyeClosed,
-      akaneEyeOpen,
-      akaneHead,
-    ] = await Promise.all([
-      p.loadImage(akaneBodyUrl),
-      p.loadImage(akaneBody2Url),
-      p.loadImage(akaneFootUrl),
-      p.loadImage(akaneEyeClosedUrl),
-      p.loadImage(akaneEyeOpenUrl),
-      p.loadImage(akaneHeadUrl),
-    ]);
-    for (const [key, url] of Object.entries(akaneMouthUrls)) {
-      const match = key.match(/aoi_mouth_(.)\.png/);
-      if (match) {
-        akaneMouths[match[1]] = await p.loadImage(url);
-      }
-    }
+    akaneImages = await loadSwingCharacterImages(p, akaneImageSetUrls);
     return ctx.createCanvas(30, 60);
   },
   draw(ctx, p, params) {
     const frame = currentFrameInfo(ctx);
-    p.clear();
-    p.resetMatrix();
-    p.noSmooth();
-    p.image(akaneFoot, 0, 0);
-
-    {
-      using _ = useRenderingContext(p);
-      const bodyShift = (
-        params.swingOverride !== -1
-          ? params.swingOverride === 1
-          : (frame.measure * params.swingMeasureFactor) % 1 >=
-            params.swingInterval
-      )
-        ? 0
-        : params.swing;
-      p.translate(0, bodyShift);
-      const bodyImage =
-        params.bodySwing === -1
-          ? ((frame.measure * params.swingMeasureFactor) % 1) -
-              params.swingInterval / 4 >=
-            params.swingInterval
-            ? akaneBody
-            : akaneBody2
-          : params.bodySwing === 1
-            ? akaneBody2
-            : akaneBody;
-      p.image(bodyImage, 0, 0);
-      p.image(akaneHead, 0, 0);
-      p.image(params.eye >= 0.5 ? akaneEyeOpen : akaneEyeClosed, -4, 0);
-      const labEntry = labEntries.find(
-        (entry) =>
-          ctx.frameInfo.globalTime >= entry.start &&
-          ctx.frameInfo.globalTime < entry.end,
-      );
-      if (labEntry && akaneMouths[labEntry.label]) {
-        const mouth = akaneMouths[labEntry.label];
-        p.image(mouth, -4, 0);
-      } else {
-        p.image(akaneMouths["n"]!, -4, 0);
-      }
-    }
+    drawSwingCharacter(p, {
+      frameMeasure: frame.measure,
+      globalTime: ctx.frameInfo.globalTime,
+      swing: params.swing,
+      swingInterval: params.swingInterval,
+      swingMeasureFactor: params.swingMeasureFactor,
+      swingOverride: params.swingOverride,
+      bodySwing: params.bodySwing,
+      eye: params.eye,
+      eyeOffsetX: -4,
+      mouthOffsetX: -4,
+      images: akaneImages,
+      labEntries: params.koto ? kotoLabEntries : labEntries,
+      shut: params.shut,
+    });
   },
 });

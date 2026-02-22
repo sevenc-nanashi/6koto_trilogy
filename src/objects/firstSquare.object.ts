@@ -1,7 +1,7 @@
 import { defineObject, numberStep } from "vi5";
 import { clip, easeOutQuint, unlerp } from "../utils/ease";
 import { currentFrameInfo } from "../utils/currentFrameInfo";
-import { drumsMidi, drumsMidiNumbers, mainMidi } from "../utils/midi";
+import { aoDrumsMidi, drumsMidiNumbers, mainMidi } from "../utils/midi";
 
 const baseSize = 200;
 const expand = 20;
@@ -36,7 +36,7 @@ export default defineObject({
     p.stroke(255);
     p.translate(baseSize / 2 + expand, baseSize / 2 + expand);
     const frame = currentFrameInfo(ctx);
-    const lastKick = drumsMidi.notes.findLast(
+    const lastKick = aoDrumsMidi.notes.findLast(
       (note) =>
         note.midi === drumsMidiNumbers.kick &&
         note.time <= ctx.frameInfo.currentTime,

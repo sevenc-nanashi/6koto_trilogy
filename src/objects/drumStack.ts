@@ -14,6 +14,8 @@ const beatsPerMeasure = 8;
 const slicePadding = 1;
 const lastMeasureOpacity = 0.45;
 type RgbColor = readonly [number, number, number];
+const cellSubdivisionCandidates = [1, 2, 3, 4] as const; // 8th / 12th / 16th
+const quantizeTolerance = 1e-4;
 
 function drawDrumPattern(
   p: p5,
@@ -31,6 +33,12 @@ function drawDrumPattern(
     using _stroke = useRenderingContext(p);
     p.stroke(color[0], color[1], color[2], 255 * opacity * progress);
     drawRotatedSquare(p, size / 2);
+  }
+  if (pattern.openHiHat) {
+    using _stroke = useRenderingContext(p);
+    p.translate(size / 2 - 2, size / 2 - 2);
+    p.fill(color[0], color[1], color[2], 255 * opacity * progress);
+    drawFilledRotatedSquare(p, 1);
   }
 
   const scaledSize = lerp(size / 2 - 4, size / 2, progress);
@@ -56,7 +64,8 @@ export function drawDrumStack(
   p.strokeWeight(0.5);
   p.noSmooth();
   const frame = currentFrameInfo(ctx);
-  const initialTime = ctx.frameInfo.globalTime - ctx.frameInfo.currentTime - 0.05;
+  const initialTime =
+    ctx.frameInfo.globalTime - ctx.frameInfo.currentTime - 0.05;
 
   const currentMeasure = Math.floor(frame.measure);
   const lastMeasure = currentMeasure - 1;
@@ -99,7 +108,9 @@ export function drawDrumStack(
   );
   for (const cell of sortedCells) {
     const sortedPatterns = cell.patterns.toSorted((a, b) => a.ticks - b.ticks);
-    const isDivided = sortedPatterns.length > 1;
+    const bestGrid = getBestCellGrid(sortedPatterns, cell.beatInMeasure);
+    const sliceCount = bestGrid?.subdivisions ?? sortedPatterns.length;
+    const isDivided = sliceCount > 1;
     for (const [index, pattern] of sortedPatterns.entries()) {
       const progress = clip(
         (frame.measure - midiHeader.ticksToMeasures(pattern.ticks)) * 16,
@@ -118,7 +129,8 @@ export function drawDrumStack(
           size / 2 -
           padding,
       );
-      clipToSlice(p, index, sortedPatterns.length, size / 2 + 2);
+      const sliceIndex = bestGrid?.slots[index] ?? index;
+      clipToSlice(p, sliceIndex, sliceCount, size / 2 + 2);
       drawDrumPattern(
         p,
         pattern,
@@ -128,6 +140,71 @@ export function drawDrumStack(
       );
     }
   }
+}
+
+function getBestCellGrid(
+  patterns: DrumPattern[],
+  beatInMeasure: number,
+): { subdivisions: number; slots: number[]; error: number } | undefined {
+  const candidates = cellSubdivisionCandidates
+    .map((subdivisions) => {
+      const fit = getCellSlots(patterns, beatInMeasure, subdivisions);
+      if (fit === undefined) {
+        return undefined;
+      }
+      return { subdivisions, ...fit };
+    })
+    .filter(
+      (
+        candidate,
+      ): candidate is {
+        subdivisions: 1 | 2 | 3 | 4;
+        slots: number[];
+        error: number;
+      } => candidate !== undefined,
+    );
+
+  if (candidates.length === 0) {
+    return undefined;
+  }
+
+  return candidates.toSorted(
+    (a, b) => a.error - b.error || a.subdivisions - b.subdivisions,
+  )[0];
+}
+
+function getCellSlots(
+  patterns: DrumPattern[],
+  beatInMeasure: number,
+  subdivisions: number,
+): { slots: number[]; error: number } | undefined {
+  const slots: number[] = [];
+  const seen = new Set<number>();
+  let totalError = 0;
+
+  for (const pattern of patterns) {
+    const measure = midiHeader.ticksToMeasures(pattern.ticks);
+    const measureFloor = Math.floor(measure);
+    const beatProgressInCell =
+      (measure - measureFloor) * beatsPerMeasure - beatInMeasure;
+    const clamped = Math.min(1, Math.max(0, beatProgressInCell));
+    const raw = clamped * subdivisions;
+    const rounded = Math.round(raw);
+    const error = Math.abs(raw - rounded);
+    if (error > quantizeTolerance) {
+      return undefined;
+    }
+
+    const slot = rounded >= subdivisions ? subdivisions - 1 : rounded;
+    if (seen.has(slot)) {
+      return undefined;
+    }
+    seen.add(slot);
+    slots.push(slot);
+    totalError += error;
+  }
+
+  return { slots, error: totalError };
 }
 
 function clipToSlice(p: p5, index: number, count: number, halfSize: number) {

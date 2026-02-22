@@ -1,10 +1,10 @@
 import { defineObject } from "vi5";
-import { akaDrumsMidiPatterns } from "../utils/midi";
+import { kotoDrumsMidiPatterns } from "../utils/midi";
 import { drawDrumStack, height, width } from "./drumStack";
 
 export default defineObject({
-  id: "aka-drum-stack",
-  label: "Aka Drum Stack",
+  id: "koto-drum-stack",
+  label: "Koto Drum Stack",
   parameters: {
     color: {
       type: "color",
@@ -21,7 +21,7 @@ export default defineObject({
     return ctx.createCanvas(width, height);
   },
   draw(ctx, p, params) {
-    drawDrumStack(p, ctx, akaDrumsMidiPatterns, [
+    drawDrumStack(p, ctx, kotoDrumsMidiPatterns, [
       params.color.r,
       params.color.g,
       params.color.b,

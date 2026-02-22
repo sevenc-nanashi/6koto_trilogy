@@ -4,10 +4,10 @@ import { clip, easeOutQuint, unlerp } from "../utils/ease";
 import { currentFrameInfo } from "../utils/currentFrameInfo";
 import {
   drumsMidiNumbers,
-  aoDrumsMidiTrack,
-  aoMidi,
+  kotoDrumsMidiTrack,
+  kotoMidi,
   DrumPattern,
-  aoDrumsMidiPatterns,
+  kotoDrumsMidiPatterns,
 } from "../utils/midi";
 import { useRenderingContext } from "../utils/useRenderingContext";
 import { drawFilledRotatedSquare, drawRotatedSquare } from "../utils/shape";
@@ -17,8 +17,8 @@ const expand = 20;
 const snareExpand = 20;
 const cymbalSize = baseSize * 0.6;
 export default defineObject({
-  id: "ao-chorus-center-square",
-  label: "Ao Chorus Center Square",
+  id: "koto-chorus-center-square",
+  label: "Koto Chorus Center Square",
   parameters: {
     circleProgress: {
       type: "number",
@@ -46,17 +46,17 @@ export default defineObject({
     p.noSmooth();
     p.stroke(255);
     p.translate(baseSize / 2 + expand, baseSize / 2 + expand);
-    p.scale(-1, 1);
     const frame = currentFrameInfo(ctx);
-    const lastKick = aoDrumsMidiTrack.notes.findLast(
+    const lastKick = kotoDrumsMidiTrack.notes.findLast(
       (note) =>
         note.midi === drumsMidiNumbers.kick &&
         note.time <= ctx.frameInfo.globalTime,
     );
     const kickElapsed = lastKick
-      ? frame.measure - aoMidi.toneJsMidi.header.ticksToMeasures(lastKick.ticks)
+      ? frame.measure -
+        kotoMidi.toneJsMidi.header.ticksToMeasures(lastKick.ticks)
       : Infinity;
-    const lastSnare = aoDrumsMidiTrack.notes.findLast(
+    const lastSnare = kotoDrumsMidiTrack.notes.findLast(
       (note) =>
         note.midi === drumsMidiNumbers.snare &&
         note.time <= ctx.frameInfo.globalTime,
@@ -67,13 +67,13 @@ export default defineObject({
 
     const snareElapsed = lastSnare
       ? frame.measure -
-        aoMidi.toneJsMidi.header.ticksToMeasures(lastSnare.ticks)
+        kotoMidi.toneJsMidi.header.ticksToMeasures(lastSnare.ticks)
       : Infinity;
     const snareRadius =
       baseSize / 2 -
       easeOutQuint(clip(snareElapsed * 4)) * snareExpand * params.activate;
 
-    const lastCymbal: DrumPattern | undefined = aoDrumsMidiPatterns.findLast(
+    const lastCymbal: DrumPattern | undefined = kotoDrumsMidiPatterns.findLast(
       (pattern) =>
         (pattern.cymbal || pattern.subCymbal) &&
         pattern.time <= ctx.frameInfo.globalTime,
@@ -94,7 +94,7 @@ export default defineObject({
     if (lastCymbal) {
       const elapsed =
         frame.measure -
-        aoMidi.toneJsMidi.header.ticksToMeasures(lastCymbal.ticks);
+        kotoMidi.toneJsMidi.header.ticksToMeasures(lastCymbal.ticks);
       const progress = clip(unlerp(0, 2, elapsed));
       if (lastCymbal.cymbal) {
         p.noStroke();
