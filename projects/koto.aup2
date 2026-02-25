@@ -1,7 +1,7 @@
 [project]
-version=2003300
+version=2003400
 file=E:\aviutl2_projects\20260218_6oclock_koto\koto2.aup2
-display.scene=0
+display.scene=1
 preview.scene=0
 [scene.0]
 scene=0
@@ -79,7 +79,7 @@ frame=100,150,497,894,1292,1689,2086,2483,2880,3278,3675,4072,4469,4867,5264,566
 [1.0]
 effect.name=Koto Chords
 Index=0,0,1,2,3,2,3,2,3,4,5,4,6,7,8,9,10,11,12,13,14,4,6,6,15,16,17,18,0,瞬間移動,0
-Batch Size=10
+Batch Size=0
 Freeze=0
 [1.1]
 effect.name=標準描画
@@ -122,12 +122,12 @@ video.rate=60
 video.scale=1
 audio.rate=44100
 output.file=E:\aviutl2_projects\20260218_6oclock_koto\dist\koto5.mkv
-cursor.frame=7250
-cursor.layer=76
+cursor.frame=0
+cursor.layer=68
 preview.frame=0
-display.frame=7262
-display.layer=59
-display.zoom=100000
+display.frame=0
+display.layer=58
+display.zoom=4000
 display.order=1
 display.camera=-658.381714,-267.100616,-737.405457,0.000000,0.000000,0.000000
 display.grid.x=16,-16
@@ -136,7 +136,7 @@ display.grid.width=200
 display.grid.height=200
 display.grid.step=200.000000
 display.grid.range=10000.000000
-display.tempo.bpm=290.000000
+display.tempo.bpm=580.000000
 display.tempo.beat=8
 display.tempo.offset=0.000000
 [2]
@@ -154,10 +154,12 @@ effect.name=音声ファイル
 effect.name=音声再生
 音量=100.00
 左右=0.00
+[2.2]
+effect.name=quantizer.aux2対象外
 [3]
 layer=1
 scene=1
-frame=7225,8043
+frame=7225,8044
 [3.0]
 effect.name=図形
 図形の種類=円
@@ -194,7 +196,7 @@ Group=1
 [4]
 layer=1
 scene=1
-frame=8044,9633
+frame=8045,9633
 [4.0]
 effect.name=図形
 図形の種類=円
@@ -268,7 +270,7 @@ Group=1
 [6]
 layer=3
 scene=1
-frame=7222,9630
+frame=7225,9633
 [6.0]
 effect.name=フィルタオブジェクト
 [6.1]
@@ -283,7 +285,7 @@ dst=
 [7]
 layer=4
 scene=1
-frame=3230,4073
+frame=3228,4071
 [7.0]
 effect.name=図形
 図形の種類=円
@@ -320,7 +322,7 @@ Group=1
 [8]
 layer=4
 scene=1
-frame=4074,5662
+frame=4072,5660
 [8.0]
 effect.name=図形
 図形の種類=円
@@ -394,7 +396,7 @@ Group=1
 [10]
 layer=5
 scene=1
-frame=3230,5662
+frame=3228,5660
 [10.0]
 effect.name=フィルタオブジェクト
 [10.1]
@@ -409,7 +411,7 @@ dst=
 [11]
 layer=5
 scene=1
-frame=7225,8043
+frame=7225,8044
 [11.0]
 effect.name=図形
 図形の種類=円
@@ -446,7 +448,7 @@ Group=1
 [12]
 layer=5
 scene=1
-frame=8044,9633
+frame=8045,9633
 [12.0]
 effect.name=図形
 図形の種類=円
@@ -498,7 +500,7 @@ dst=
 [14]
 layer=7
 scene=1
-frame=3228,5662
+frame=3228,5660
 [14.0]
 effect.name=カメラ制御
 X=0.00
@@ -538,7 +540,7 @@ Group2=1
 [16]
 layer=8
 scene=1
-frame=3230,4866
+frame=3228,4866
 [16.0]
 effect.name=手ぶれ
 振幅=2.0
@@ -547,7 +549,7 @@ effect.name=手ぶれ
 [17]
 layer=8
 scene=1
-frame=4867,5662
+frame=4867,5660
 [17.0]
 effect.name=手ぶれ
 振幅=2.0
@@ -565,7 +567,7 @@ effect.name=手ぶれ
 [19]
 layer=9
 scene=1
-frame=3278,4073
+frame=3278,4071
 [19.0]
 effect.name=画像ファイル
 ファイル=E:\aviutl2_projects\20260218_6oclock_koto\clipboard.aux2\clipboard_20260219_153937.webp
@@ -592,7 +594,7 @@ Z軸回転=0.00
 [20]
 layer=9
 scene=1
-frame=4074,4866
+frame=4072,4866
 [20.0]
 effect.name=画像ファイル
 ファイル=E:\aviutl2_projects\20260218_6oclock_koto\clipboard.aux2\clipboard_20260220_223622.webp
@@ -646,7 +648,7 @@ Z軸回転=0.00
 [22]
 layer=9
 scene=1
-frame=5264,5662
+frame=5264,5660
 [22.0]
 effect.name=画像ファイル
 ファイル=E:\aviutl2_projects\20260218_6oclock_koto\clipboard.aux2\clipboard_20260220_223622.webp
@@ -715,7 +717,7 @@ PI=
 effect.name=クリッピング
 上=0
 下=0
-左=487
+左=490
 右=0
 中心の位置を変更=0
 [24]
@@ -830,7 +832,7 @@ PI=
 [27]
 layer=10
 scene=1
-frame=3230,5662
+frame=3228,5660
 [27.0]
 effect.name=クリッピング
 上=0
@@ -848,7 +850,7 @@ PI=
 [28]
 layer=10
 scene=1
-frame=8045,8841
+frame=8045,8838
 [28.0]
 effect.name=画像ファイル
 ファイル=E:\aviutl2_projects\20260218_6oclock_koto\clipboard.aux2\clipboard_20260220_223622.webp
@@ -882,7 +884,7 @@ effect.name=クリッピング
 [29]
 layer=11
 scene=1
-frame=3230,5662
+frame=3228,5660
 [29.0]
 effect.name=フレームバッファ
 アルファチャンネルを維持=1
@@ -898,7 +900,7 @@ Group=1
 [30]
 layer=11
 scene=1
-frame=8045,10425
+frame=8045,10427
 [30.0]
 effect.name=フレームバッファ
 アルファチャンネルを維持=1
@@ -914,7 +916,7 @@ Group=1
 [31]
 layer=12
 scene=1
-frame=3975,4024
+frame=3973,4022
 [31.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -933,7 +935,7 @@ PI=
 [32]
 layer=12
 scene=1
-frame=4025,4073
+frame=4023,4071
 [32.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -952,7 +954,7 @@ PI=
 [33]
 layer=12
 scene=1
-frame=4074,4123
+frame=4072,4121
 [33.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -971,7 +973,7 @@ PI=
 [34]
 layer=12
 scene=1
-frame=4770,4818
+frame=4767,4816
 [34.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -990,7 +992,7 @@ PI=
 [35]
 layer=12
 scene=1
-frame=4819,4866
+frame=4817,4866
 [35.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -1018,7 +1020,7 @@ effect.name=Rusty Pixel Sort Filter
 [37]
 layer=12
 scene=1
-frame=8643,8691
+frame=8640,8689
 [37.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -1037,7 +1039,7 @@ PI=
 [38]
 layer=12
 scene=1
-frame=8692,8741
+frame=8690,8739
 [38.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -1056,7 +1058,7 @@ PI=
 [39]
 layer=12
 scene=1
-frame=8742,8791
+frame=8740,8788
 [39.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -1075,7 +1077,7 @@ PI=
 [40]
 layer=12
 scene=1
-frame=8792,8840
+frame=8789,8838
 [40.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -1094,7 +1096,7 @@ PI=
 [41]
 layer=12
 scene=1
-frame=8841,8890
+frame=8839,8888
 [41.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -1113,7 +1115,7 @@ PI=
 [42]
 layer=12
 scene=1
-frame=9537,9585
+frame=9534,9583
 [42.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -1132,7 +1134,7 @@ PI=
 [43]
 layer=12
 scene=1
-frame=9586,9633
+frame=9584,9633
 [43.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -1151,7 +1153,7 @@ PI=
 [44]
 layer=13
 scene=1
-frame=4025,4073
+frame=4023,4071
 [44.0]
 effect.name=Rusty Pixel Sort Filter
 しきい値=1.000,0.000,直線移動(時間制御),0|0.867004,0.381974,0.10749,0.031116
@@ -1160,7 +1162,7 @@ effect.name=Rusty Pixel Sort Filter
 [45]
 layer=13
 scene=1
-frame=4074,4098
+frame=4072,4096
 [45.0]
 effect.name=色調補正@Basic_S
 明るさ=80.00,100.00,直線移動(時間制御),0|0.109109,0.743562,0.615182,0
@@ -1176,7 +1178,7 @@ PI=
 [46]
 layer=13
 scene=1
-frame=4844,4866
+frame=4842,4866
 [46.0]
 effect.name=色調補正@Basic_S
 明るさ=100.00,150.00,直線移動(時間制御),0|0.82166,0,0.035425,0.725322
@@ -1208,7 +1210,7 @@ PI=
 [48]
 layer=13
 scene=1
-frame=8792,8840
+frame=8789,8838
 [48.0]
 effect.name=Rusty Pixel Sort Filter
 しきい値=1.000,0.000,直線移動(時間制御),0|0.867004,0.381974,0.10749,0.031116
@@ -1217,7 +1219,7 @@ effect.name=Rusty Pixel Sort Filter
 [49]
 layer=14
 scene=1
-frame=5564,5662
+frame=5562,5660
 [49.0]
 effect.name=Rusty Pixel Sort Filter
 しきい値=1.000,0.000,直線移動(時間制御),0|0.802739,0.145923,0.10139,0.580472
@@ -1226,7 +1228,7 @@ effect.name=Rusty Pixel Sort Filter
 [50]
 layer=14
 scene=1
-frame=8742,8791
+frame=8740,8788
 [50.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -1245,7 +1247,7 @@ PI=
 [51]
 layer=14
 scene=1
-frame=8792,8841
+frame=8789,8838
 [51.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -1264,7 +1266,7 @@ PI=
 [52]
 layer=15
 scene=1
-frame=3230,5662
+frame=3228,5660
 [52.0]
 effect.name=モザイク
 サイズ=3
@@ -1272,7 +1274,7 @@ effect.name=モザイク
 [53]
 layer=15
 scene=1
-frame=7997,10429
+frame=7995,10427
 [53.0]
 effect.name=モザイク
 サイズ=3
@@ -1280,7 +1282,7 @@ effect.name=モザイク
 [54]
 layer=16
 scene=1
-frame=3278,5662
+frame=3278,5660
 [54.0]
 effect.name=図形
 図形の種類=背景
@@ -1678,7 +1680,7 @@ effect.name=モザイク
 [65]
 layer=18
 scene=1
-frame=1689,2485
+frame=1689,2482
 [65.0]
 effect.name=PixelSnap_S
 [65.1]
@@ -1708,7 +1710,7 @@ effect.name=単色化
 [66]
 layer=18
 scene=1
-frame=2486,3277
+frame=2483,3277
 [66.0]
 effect.name=PixelSnap_S
 [66.1]
@@ -1885,22 +1887,22 @@ scene=1
 frame=2781,2879
 [71.0]
 effect.name=Rusty Pixel Sort Filter
-しきい値=1.000,0.000,直線移動(時間制御),0|0.802739,0.145923,0.136935,0.62339
+しきい値=0.900,0.000,直線移動(時間制御),0|0.802739,0.145923,0.054868,0.62339
 ソート対象=しきい値以上
 ソート方向=左右（反転）
 [72]
 layer=19
 scene=1
-frame=2880,2978
+frame=2880,2979
 [72.0]
 effect.name=Rusty Pixel Sort Filter
 しきい値=0.000,1.000,直線移動(時間制御),0|0.136072,0.866953,0.131406,0.559013
 ソート対象=しきい値以上
-ソート方向=左右（反転）
+ソート方向=左右
 [73]
 layer=19
 scene=1
-frame=3230,5662
+frame=3228,5660
 [73.0]
 effect.name=カメラ制御
 X=0.00
@@ -1920,7 +1922,7 @@ Group2=1
 [74]
 layer=19
 scene=1
-frame=5985,6083
+frame=5984,6082
 [74.0]
 effect.name=Rusty Pixel Sort Filter
 しきい値=0.500,0.000,直線移動(時間制御),0|0.802739,0.145923,0.253049,0.494635
@@ -1929,7 +1931,7 @@ effect.name=Rusty Pixel Sort Filter
 [75]
 layer=19
 scene=1
-frame=6084,6182
+frame=6083,6182
 [75.0]
 effect.name=Rusty Pixel Sort Filter
 しきい値=0.000,1.000,直線移動(時間制御),0|0.265374,0.862661,1,0
@@ -1938,7 +1940,7 @@ effect.name=Rusty Pixel Sort Filter
 [76]
 layer=19
 scene=1
-frame=6359,6455
+frame=6356,6455
 [76.0]
 effect.name=Rusty Pixel Sort Filter
 しきい値=1.000,0.000,直線移動(時間制御),0|0.802739,0.145923,0.10139,0.580472
@@ -1947,7 +1949,7 @@ effect.name=Rusty Pixel Sort Filter
 [77]
 layer=19
 scene=1
-frame=6456,6556
+frame=6456,6554
 [77.0]
 effect.name=Rusty Pixel Sort Filter
 しきい値=0.000,1.000,直線移動(時間制御),0|0.58054,1,0.452167,0.001073
@@ -1956,7 +1958,7 @@ effect.name=Rusty Pixel Sort Filter
 [78]
 layer=19
 scene=1
-frame=6756,6852
+frame=6754,6852
 [78.0]
 effect.name=Rusty Pixel Sort Filter
 しきい値=0.500,0.000,直線移動(時間制御),0|0.802739,0.145923,0.471058,0.443133
@@ -1965,7 +1967,7 @@ effect.name=Rusty Pixel Sort Filter
 [79]
 layer=19
 scene=1
-frame=6853,6953
+frame=6853,6951
 [79.0]
 effect.name=Rusty Pixel Sort Filter
 しきい値=0.000,1.000,直線移動(時間制御),0|0.58054,1,0.452167,0.001073
@@ -1977,9 +1979,9 @@ scene=1
 frame=7052,7249
 [80.0]
 effect.name=Rusty Pixel Sort Filter
-しきい値=1.000,0.000,直線移動(時間制御),0|0.869787,0.55794,0.124285,0.146996
+しきい値=1.000,0.200,直線移動(時間制御),0|0.875106,0.171674,0.124285,0.146996
 ソート対象=しきい値以上
-ソート方向=上下
+ソート方向=上下（反転）
 [81]
 layer=20
 scene=1
@@ -2098,7 +2100,7 @@ Z軸回転=0.00
 [85]
 layer=20
 scene=1
-frame=5661,6083
+frame=5661,6082
 [85.0]
 effect.name=画像ファイル
 ファイル=E:\aviutl2_projects\20260218_6oclock_koto\illusts\03a.png
@@ -2125,7 +2127,7 @@ Z軸回転=0.00
 [86]
 layer=20
 scene=1
-frame=6084,6455
+frame=6083,6455
 [86.0]
 effect.name=画像ファイル
 ファイル=E:\aviutl2_projects\20260218_6oclock_koto\illusts\03.png
@@ -2234,12 +2236,12 @@ Z軸回転=0.00
 [90]
 layer=21
 scene=1
-frame=596,895,1688
+frame=596,894,1688
 [90.0]
 effect.name=Koto Chorus Center Square
 Circle Progress=0.000,1.000,1.000,区間ごとに時間制御@Basic_S,0|0.536765,0,0.055926,0.541669
 Activate=0,1,1,瞬間移動,0
-Batch Size=10
+Batch Size=0
 Freeze=0
 [90.1]
 effect.name=標準描画
@@ -2265,7 +2267,7 @@ frame=3278,5660
 effect.name=Koto Chorus Center Square
 Circle Progress=1.000
 Activate=1
-Batch Size=10
+Batch Size=0
 Freeze=0
 [91.1]
 effect.name=標準描画
@@ -2286,12 +2288,12 @@ Z軸回転=0.00
 [92]
 layer=21
 scene=1
-frame=7250,10676
+frame=7250,10675
 [92.0]
 effect.name=Koto Chorus Center Square
 Circle Progress=1.000
 Activate=1
-Batch Size=10
+Batch Size=0
 Freeze=0
 [92.1]
 effect.name=標準描画
@@ -2362,7 +2364,7 @@ Body Swing=0
 Eye Open=0
 Koto Mode=1
 Shut=0
-Batch Size=10
+Batch Size=0
 Freeze=0
 [94.1]
 effect.name=標準描画
@@ -2383,7 +2385,7 @@ Z軸回転=0.00
 [95]
 layer=23
 scene=1
-frame=3278,4073
+frame=3278,4071
 [95.0]
 effect.name=SwingAkane
 Swing=1
@@ -2394,7 +2396,7 @@ Body Swing=-1,-1,瞬間移動,0
 Eye Open=1,1,瞬間移動,0
 Koto Mode=1
 Shut=0
-Batch Size=10
+Batch Size=0
 Freeze=0
 [95.1]
 effect.name=標準描画
@@ -2415,7 +2417,7 @@ Z軸回転=0.00
 [96]
 layer=23
 scene=1
-frame=4074,4819,4866
+frame=4072,4817,4866
 [96.0]
 effect.name=SwingAkane
 Swing=1
@@ -2426,7 +2428,7 @@ Body Swing=-1,0,-1,瞬間移動,0
 Eye Open=1,0,1,瞬間移動,0
 Koto Mode=1
 Shut=0
-Batch Size=10
+Batch Size=0
 Freeze=0
 [96.1]
 effect.name=標準描画
@@ -2458,7 +2460,7 @@ Body Swing=-1
 Eye Open=0,0,1,0,0,瞬間移動,0
 Koto Mode=1
 Shut=0
-Batch Size=10
+Batch Size=0
 Freeze=0
 [97.1]
 effect.name=標準描画
@@ -2479,7 +2481,7 @@ Z軸回転=0.00
 [98]
 layer=23
 scene=1
-frame=8045,8119,8133,8156,8169,8218,8280,8355,8479,8516,8529,8578,8684,8727,8789,8838
+frame=8045,8119,8132,8156,8169,8218,8280,8355,8479,8516,8529,8578,8684,8727,8789,8838
 [98.0]
 effect.name=SwingAkane
 Swing=1
@@ -2490,7 +2492,7 @@ Body Swing=-1
 Eye Open=1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,瞬間移動,0
 Koto Mode=1
 Shut=1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,瞬間移動,0
-Batch Size=10
+Batch Size=0
 Freeze=0
 [98.1]
 effect.name=標準描画
@@ -2522,7 +2524,7 @@ Body Swing=-1
 Eye Open=1,0,瞬間移動,0
 Koto Mode=1
 Shut=0,1,瞬間移動,0
-Batch Size=10
+Batch Size=0
 Freeze=0
 [99.1]
 effect.name=標準描画
@@ -2593,7 +2595,7 @@ Body Swing=0
 Eye Open=0
 Koto Mode=1
 Shut=0
-Batch Size=10
+Batch Size=0
 Freeze=0
 [101.1]
 effect.name=標準描画
@@ -2614,7 +2616,7 @@ Z軸回転=0.00
 [102]
 layer=25
 scene=1
-frame=3278,4073
+frame=3278,4071
 [102.0]
 effect.name=SwingAoi
 Swing=1
@@ -2625,7 +2627,7 @@ Body Swing=-1
 Eye Open=1
 Koto Mode=1
 Shut=0
-Batch Size=10
+Batch Size=0
 Freeze=0
 [102.1]
 effect.name=標準描画
@@ -2646,7 +2648,7 @@ Z軸回転=180.00
 [103]
 layer=25
 scene=1
-frame=4074,4819,4866
+frame=4072,4817,4866
 [103.0]
 effect.name=SwingAoi
 Swing=1
@@ -2657,7 +2659,7 @@ Body Swing=-1,0,-1,瞬間移動,0
 Eye Open=1,0,1,瞬間移動,0
 Koto Mode=1
 Shut=0
-Batch Size=10
+Batch Size=0
 Freeze=0
 [103.1]
 effect.name=標準描画
@@ -2678,7 +2680,7 @@ Z軸回転=0.00
 [104]
 layer=25
 scene=1
-frame=7250,7548,7623,7945,7993,8044
+frame=7250,7548,7623,7945,7995,8044
 [104.0]
 effect.name=SwingAoi
 Swing=1
@@ -2689,7 +2691,7 @@ Body Swing=-1
 Eye Open=0,0,1,0,0,0,瞬間移動,0
 Koto Mode=1
 Shut=0,0,0,0,1,0,瞬間移動,0
-Batch Size=10
+Batch Size=0
 Freeze=0
 [104.1]
 effect.name=標準描画
@@ -2710,7 +2712,7 @@ Z軸回転=0.00
 [105]
 layer=25
 scene=1
-frame=8045,8119,8133,8156,8169,8218,8280,8355,8479,8516,8529,8578,8616,8665,8684,8727,8789,8838
+frame=8045,8119,8132,8156,8169,8218,8280,8355,8479,8516,8529,8578,8616,8665,8684,8727,8789,8838
 [105.0]
 effect.name=SwingAoi
 Swing=1
@@ -2721,7 +2723,7 @@ Body Swing=-1
 Eye Open=1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,瞬間移動,0
 Koto Mode=1
 Shut=0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,瞬間移動,0
-Batch Size=10
+Batch Size=0
 Freeze=0
 [105.1]
 effect.name=標準描画
@@ -2753,7 +2755,7 @@ Body Swing=-1
 Eye Open=1,0,瞬間移動,0
 Koto Mode=1
 Shut=0,1,瞬間移動,0
-Batch Size=10
+Batch Size=0
 Freeze=0
 [106.1]
 effect.name=標準描画
@@ -2796,7 +2798,7 @@ Y=0
 影を別オブジェクトで描画=0
 [107.2]
 effect.name=座標
-X=13.00
+X=18.00
 Y=-170.00
 Z=0.00
 Group=1
@@ -2813,7 +2815,7 @@ frame=894,1291
 [108.0]
 effect.name=Koto Drum Stack
 Color=b8fbff
-Batch Size=10
+Batch Size=0
 Freeze=0
 [108.1]
 effect.name=標準描画
@@ -2838,7 +2840,7 @@ frame=1292,1688
 [109.0]
 effect.name=Koto Drum Stack
 Color=ffcadb
-Batch Size=10
+Batch Size=0
 Freeze=0
 [109.1]
 effect.name=標準描画
@@ -2859,11 +2861,11 @@ Z軸回転=0.00
 [110]
 layer=27
 scene=1
-frame=1689,2086
+frame=1689,2085
 [110.0]
 effect.name=Koto Drum Stack
 Color=b8fbff
-Batch Size=10
+Batch Size=0
 Freeze=0
 [110.1]
 effect.name=標準描画
@@ -2884,11 +2886,11 @@ Z軸回転=0.00
 [111]
 layer=27
 scene=1
-frame=2087,2483
+frame=2086,2482
 [111.0]
 effect.name=Koto Drum Stack
 Color=ffcadb
-Batch Size=10
+Batch Size=0
 Freeze=0
 [111.1]
 effect.name=標準描画
@@ -2909,11 +2911,11 @@ Z軸回転=0.00
 [112]
 layer=27
 scene=1
-frame=2484,2879
+frame=2483,2879
 [112.0]
 effect.name=Koto Drum Stack
 Color=b8fbff
-Batch Size=10
+Batch Size=0
 Freeze=0
 [112.1]
 effect.name=標準描画
@@ -2938,7 +2940,7 @@ frame=2880,3277
 [113.0]
 effect.name=Koto Drum Stack
 Color=ffcadb
-Batch Size=10
+Batch Size=0
 Freeze=0
 [113.1]
 effect.name=標準描画
@@ -2963,7 +2965,7 @@ frame=3278,4866
 [114.0]
 effect.name=Koto Drum Stack
 Color=f4da99
-Batch Size=10
+Batch Size=0
 Freeze=0
 [114.1]
 effect.name=標準描画
@@ -2988,7 +2990,7 @@ frame=4867,5660
 [115.0]
 effect.name=Koto Drum Stack
 Color=f4da99
-Batch Size=10
+Batch Size=0
 Freeze=0
 [115.1]
 effect.name=標準描画
@@ -3013,7 +3015,7 @@ frame=5661,6057
 [116.0]
 effect.name=Koto Drum Stack
 Color=b8fbff
-Batch Size=10
+Batch Size=0
 Freeze=0
 [116.1]
 effect.name=標準描画
@@ -3038,7 +3040,7 @@ frame=6058,6455
 [117.0]
 effect.name=Koto Drum Stack
 Color=ffcadb
-Batch Size=10
+Batch Size=0
 Freeze=0
 [117.1]
 effect.name=標準描画
@@ -3059,11 +3061,11 @@ Z軸回転=0.00
 [118]
 layer=27
 scene=1
-frame=6456,6853
+frame=6456,6852
 [118.0]
 effect.name=Koto Drum Stack
 Color=b8fbff
-Batch Size=10
+Batch Size=0
 Freeze=0
 [118.1]
 effect.name=標準描画
@@ -3084,11 +3086,11 @@ Z軸回転=0.00
 [119]
 layer=27
 scene=1
-frame=6854,7249
+frame=6853,7249
 [119.0]
 effect.name=Koto Drum Stack
 Color=ffcadb
-Batch Size=10
+Batch Size=0
 Freeze=0
 [119.1]
 effect.name=標準描画
@@ -3113,7 +3115,7 @@ frame=7250,9633
 [120.0]
 effect.name=Koto Drum Stack
 Color=f4da99
-Batch Size=10
+Batch Size=0
 Freeze=0
 [120.1]
 effect.name=標準描画
@@ -3138,7 +3140,7 @@ frame=9634,10377
 [121.0]
 effect.name=Koto Drum Stack
 Color=f4da99
-Batch Size=10
+Batch Size=0
 Freeze=0
 [121.1]
 effect.name=標準描画
@@ -3975,7 +3977,7 @@ effect.name=直角回転@Basic_S
 [134]
 layer=32
 scene=1
-frame=2436,2535
+frame=2434,2532
 [134.0]
 effect.name=図形
 図形の種類=背景
@@ -4040,7 +4042,7 @@ effect.name=BlockGlitch_Rh
 [136]
 layer=34
 scene=1
-frame=2387,2482
+frame=2384,2482
 [136.0]
 effect.name=図形
 図形の種類=背景
@@ -4694,7 +4696,7 @@ effect.name=透明度
 [151]
 layer=47
 scene=1
-frame=4867,9855
+frame=4867,9856
 [151.0]
 effect.name=グループ制御
 X=0.00
@@ -4902,7 +4904,7 @@ effect.name=PixelSnap_S
 [156]
 layer=49
 scene=1
-frame=3278,3453,4071
+frame=3278,3452,4071
 [156.0]
 effect.name=テキスト
 サイズ=14.00
@@ -5222,7 +5224,7 @@ effect.name=PixelSnap_S
 [164]
 layer=49
 scene=1
-frame=8839,9013,9630
+frame=8839,9013,9633
 [164.0]
 effect.name=テキスト
 サイズ=14.00
@@ -5262,7 +5264,7 @@ effect.name=PixelSnap_S
 [165]
 layer=50
 scene=1
-frame=2123,2175
+frame=2123,2172
 [165.0]
 effect.name=座標
 X=2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -5282,7 +5284,7 @@ Group=1
 [167]
 layer=50
 scene=1
-frame=2880,2932
+frame=2880,2929
 [167.0]
 effect.name=座標
 X=2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -5292,7 +5294,7 @@ Group=1
 [168]
 layer=50
 scene=1
-frame=3054,3106
+frame=3054,3103
 [168.0]
 effect.name=座標
 X=2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -5392,7 +5394,7 @@ Group=1
 [172]
 layer=50
 scene=1
-frame=6294,6346
+frame=6294,6343
 [172.0]
 effect.name=座標
 X=2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -5402,7 +5404,7 @@ Group=1
 [173]
 layer=50
 scene=1
-frame=6853,6904
+frame=6853,6902
 [173.0]
 effect.name=座標
 X=2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -5412,7 +5414,7 @@ Group=1
 [174]
 layer=50
 scene=1
-frame=7027,7078
+frame=7027,7075
 [174.0]
 effect.name=座標
 X=2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -5862,7 +5864,7 @@ effect.name=PixelSnap_S
 [186]
 layer=51
 scene=1
-frame=7647,7820,8019
+frame=7647,7821,8019
 [186.0]
 effect.name=テキスト
 サイズ=14.00
@@ -6022,7 +6024,7 @@ effect.name=PixelSnap_S
 [190]
 layer=52
 scene=1
-frame=7820,7993,8019
+frame=7821,7995,8019
 [190.0]
 effect.name=テキスト
 サイズ=14.00
@@ -6062,7 +6064,7 @@ effect.name=PixelSnap_S
 [191]
 layer=52
 scene=1
-frame=9410,9630
+frame=9410,9633
 [191.0]
 effect.name=テキスト
 サイズ=14.00
@@ -6390,7 +6392,7 @@ effect.name=PixelSnap_S
 [199]
 layer=55
 scene=1
-frame=8752,8761
+frame=8752,8764
 [199.0]
 effect.name=テキスト
 サイズ=14.00
@@ -6430,7 +6432,7 @@ effect.name=PixelSnap_S
 [200]
 layer=55
 scene=1
-frame=8762,8788
+frame=8765,8788
 [200.0]
 effect.name=テキスト
 サイズ=14.00
@@ -6510,7 +6512,7 @@ effect.name=PixelSnap_S
 [202]
 layer=57
 scene=1
-frame=1689,3276
+frame=1689,3277
 [202.0]
 effect.name=グループ制御
 X=0.00
@@ -6558,7 +6560,7 @@ PI=
 [203]
 layer=57
 scene=1
-frame=3277,4071
+frame=3278,4071
 [203.0]
 effect.name=グループ制御
 X=0.00
@@ -6865,7 +6867,7 @@ effect.name=PixelSnap_S
 [210]
 layer=59
 scene=1
-frame=3278,3453,4071
+frame=3278,3452,4071
 [210.0]
 effect.name=テキスト
 サイズ=14.00
@@ -7025,7 +7027,7 @@ effect.name=PixelSnap_S
 [214]
 layer=59
 scene=1
-frame=6457,6630
+frame=6456,6628
 [214.0]
 effect.name=テキスト
 サイズ=14.00
@@ -7065,7 +7067,7 @@ effect.name=PixelSnap_S
 [215]
 layer=59
 scene=1
-frame=6631,6852
+frame=6629,6852
 [215.0]
 effect.name=テキスト
 サイズ=14.00
@@ -7105,7 +7107,7 @@ effect.name=PixelSnap_S
 [216]
 layer=59
 scene=1
-frame=7250,7448,8019
+frame=7250,7449,8019
 [216.0]
 effect.name=テキスト
 サイズ=14.00
@@ -7265,7 +7267,7 @@ effect.name=PixelSnap_S
 [220]
 layer=59
 scene=1
-frame=8119,8132
+frame=8119,8131
 [220.0]
 effect.name=テキスト
 サイズ=14.00
@@ -7305,7 +7307,7 @@ effect.name=PixelSnap_S
 [221]
 layer=59
 scene=1
-frame=8133,8143
+frame=8132,8143
 [221.0]
 effect.name=テキスト
 サイズ=14.00
@@ -7565,7 +7567,7 @@ Group=1
 [229]
 layer=60
 scene=1
-frame=2483,2531
+frame=2483,2532
 [229.0]
 effect.name=座標
 X=-2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -7575,7 +7577,7 @@ Group=1
 [230]
 layer=60
 scene=1
-frame=2657,2705
+frame=2657,2706
 [230.0]
 effect.name=座標
 X=-2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -7585,7 +7587,7 @@ Group=1
 [231]
 layer=60
 scene=1
-frame=3452,3649,4071
+frame=3452,3650,4071
 [231.0]
 effect.name=テキスト
 サイズ=14.00
@@ -7685,7 +7687,7 @@ Group=1
 [235]
 layer=60
 scene=1
-frame=6457,6506
+frame=6456,6504
 [235.0]
 effect.name=座標
 X=-2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -7695,7 +7697,7 @@ Group=1
 [236]
 layer=60
 scene=1
-frame=6631,6680
+frame=6629,6678
 [236.0]
 effect.name=座標
 X=-2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -8401,7 +8403,7 @@ effect.name=PixelSnap_S
 [254]
 layer=62
 scene=1
-frame=8839,9013,9630
+frame=8839,9013,9633
 [254.0]
 effect.name=テキスト
 サイズ=14.00
@@ -8729,7 +8731,7 @@ effect.name=PixelSnap_S
 [262]
 layer=65
 scene=1
-frame=9410,9630
+frame=9410,9633
 [262.0]
 effect.name=テキスト
 サイズ=14.00
@@ -8993,8 +8995,8 @@ Z軸回転=0.00
 effect.name=ドット絵変形
 中心X=0.00
 中心Y=0.00
-X拡大率=200.000
-Y拡大率=200.000
+X拡大率=100.000
+Y拡大率=100.000
 回転（度）=0.0
 発展補間=0
 線の太さ=1.00
@@ -9025,12 +9027,12 @@ scene=1
 frame=3154,3277
 [269.0]
 effect.name=Koto Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [269.1]
 effect.name=標準描画
 X=0.00
-Y=20.00
+Y=10.00
 Z=0.00
 Group=1
 中心X=0.00
@@ -9049,7 +9051,7 @@ scene=1
 frame=3576,3773
 [270.0]
 effect.name=Koto Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [270.1]
 effect.name=標準描画
@@ -9070,10 +9072,10 @@ Z軸回転=0.00
 [271]
 layer=70
 scene=1
-frame=3975,4191
+frame=3973,4071
 [271.0]
 effect.name=Koto Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [271.1]
 effect.name=標準描画
@@ -9097,7 +9099,7 @@ scene=1
 frame=4370,4587
 [272.0]
 effect.name=Koto Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [272.1]
 effect.name=標準描画
@@ -9118,10 +9120,10 @@ Z軸回転=0.00
 [273]
 layer=70
 scene=1
-frame=4763,4866
+frame=4767,4866
 [273.0]
 effect.name=Koto Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [273.1]
 effect.name=標準描画
@@ -9142,15 +9144,15 @@ Z軸回転=0.00
 [274]
 layer=70
 scene=1
-frame=5562,5662
+frame=5562,5660
 [274.0]
 effect.name=Koto Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [274.1]
 effect.name=標準描画
 X=0.00
-Y=-96.00
+Y=-110.00
 Z=0.00
 Group=1
 中心X=0.00
@@ -9166,10 +9168,10 @@ Z軸回転=0.00
 [275]
 layer=70
 scene=1
-frame=6329,6546
+frame=6332,6542
 [275.0]
 effect.name=Koto Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [275.1]
 effect.name=標準描画
@@ -9193,7 +9195,7 @@ scene=1
 frame=7151,7249
 [276.0]
 effect.name=Koto Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [276.1]
 effect.name=標準描画
@@ -9217,7 +9219,7 @@ scene=1
 frame=7945,8044
 [277.0]
 effect.name=Koto Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [277.1]
 effect.name=標準描画
@@ -9238,10 +9240,10 @@ Z軸回転=0.00
 [278]
 layer=70
 scene=1
-frame=8296,8528
+frame=8293,8528
 [278.0]
 effect.name=Koto Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [278.1]
 effect.name=標準描画
@@ -9265,12 +9267,12 @@ scene=1
 frame=8665,8838
 [279.0]
 effect.name=Koto Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [279.1]
 effect.name=標準描画
 X=0.00
-Y=20.00
+Y=10.00
 Z=0.00
 Group=1
 中心X=0.00
@@ -9286,10 +9288,10 @@ Z軸回転=0.00
 [280]
 layer=70
 scene=1
-frame=9114,9335
+frame=9112,9335
 [280.0]
 effect.name=Koto Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [280.1]
 effect.name=標準描画
@@ -9313,12 +9315,12 @@ scene=1
 frame=9534,9633
 [281.0]
 effect.name=Koto Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [281.1]
 effect.name=標準描画
 X=0.00
-Y=20.00
+Y=10.00
 Z=0.00
 Group=1
 中心X=0.00
@@ -9536,7 +9538,7 @@ Z軸回転=0.00
 [287]
 layer=72
 scene=1
-frame=102,897
+frame=100,893
 [287.0]
 effect.name=グループ制御
 X=0.00
@@ -9559,7 +9561,7 @@ Y=0
 [288]
 layer=72
 scene=1
-frame=4867,5662
+frame=4867,5660
 [288.0]
 effect.name=グループ制御
 X=0.00
@@ -9658,7 +9660,7 @@ effect.name=PixelSnap_S
 [291]
 layer=73
 scene=1
-frame=298,347,496
+frame=298,348,496
 [291.0]
 effect.name=テキスト
 サイズ=12.00
@@ -9764,7 +9766,7 @@ effect.name=PixelSnap_S
 [293]
 layer=73
 scene=1
-frame=696,745,894
+frame=696,745,893
 [293.0]
 effect.name=テキスト
 サイズ=12.00
@@ -9817,7 +9819,7 @@ effect.name=PixelSnap_S
 [294]
 layer=73
 scene=1
-frame=2436,2482
+frame=2434,2482
 [294.0]
 effect.name=図形
 図形の種類=背景
@@ -9873,7 +9875,7 @@ Z軸回転=0.00
 [296]
 layer=73
 scene=1
-frame=4867,5662
+frame=4867,5660
 [296.0]
 effect.name=テキスト
 サイズ=12.00
@@ -9926,8 +9928,7 @@ effect.name=PixelSnap_S
 [297]
 layer=73
 scene=1
-focus=1
-frame=7153,7250
+frame=7151,7249
 [297.0]
 effect.name=図形
 図形の種類=背景
@@ -10008,7 +10009,7 @@ effect.name=PixelSnap_S
 [299]
 layer=74
 scene=1
-frame=4867,5662
+frame=4867,5660
 [299.0]
 effect.name=テキスト
 サイズ=12.00
@@ -10089,7 +10090,7 @@ Z軸回転=0.00
 [301]
 layer=74
 scene=1
-frame=7200,7248
+frame=7200,7249
 [301.0]
 effect.name=図形
 図形の種類=背景
@@ -10170,6 +10171,7 @@ effect.name=PixelSnap_S
 [303]
 layer=74
 scene=1
+focus=1
 frame=10031,10328
 [303.0]
 effect.name=テキスト
@@ -10184,7 +10186,7 @@ effect.name=テキスト
 文字揃え=左寄せ[中]
 B=0
 I=0
-テキスト=\n<s12,x12y12pxMaruMinya>- <#4fb3d7>蒼<#>の少女は\n      午前六時を目指して -<s>\n sm45974329\n\n<s12,x12y12pxMaruMinya>- <#ff6497>絳<#>の少女は\n        午後六時を夢見て -<s>\n sm45968865
+テキスト=\n<s12,x12y12pxMaruMinya>- <#4fb3d7>蒼<#>の少女は\n      午前六時を目指して -<s>\n https://youtu.be/z82MeBrvISM\n\n<s12,x12y12pxMaruMinya>- <#ff6497>絳<#>の少女は\n        午後六時を夢見て -<s>\n https://youtu.be/-kLwCVB7Qu0
 文字毎に個別オブジェクト=0
 自動スクロール=0
 移動座標上に表示=0
@@ -10276,7 +10278,7 @@ effect.name=PixelSnap_S
 [305]
 layer=75
 scene=1
-frame=4867,5662
+frame=4867,5660
 [305.0]
 effect.name=テキスト
 サイズ=12.00
@@ -10488,7 +10490,7 @@ effect.name=PixelSnap_S
 [309]
 layer=76
 scene=1
-frame=4867,4891,5064
+frame=4867,4892,5064
 [309.0]
 effect.name=テキスト
 サイズ=12.00
@@ -10541,7 +10543,7 @@ effect.name=PixelSnap_S
 [310]
 layer=76
 scene=1
-frame=5065,5089,5263
+frame=5065,5090,5263
 [310.0]
 effect.name=テキスト
 サイズ=12.00
@@ -10594,7 +10596,7 @@ effect.name=PixelSnap_S
 [311]
 layer=76
 scene=1
-frame=5264,5288,5462
+frame=5264,5289,5462
 [311.0]
 effect.name=テキスト
 サイズ=12.00
@@ -10647,7 +10649,7 @@ effect.name=PixelSnap_S
 [312]
 layer=76
 scene=1
-frame=5463,5487,5661
+frame=5463,5487,5660
 [312.0]
 effect.name=テキスト
 サイズ=12.00
@@ -10753,7 +10755,7 @@ effect.name=PixelSnap_S
 [314]
 layer=76
 scene=1
-frame=9832,9856,10030
+frame=9832,9857,10030
 [314.0]
 effect.name=テキスト
 サイズ=12.00
@@ -10806,7 +10808,7 @@ effect.name=PixelSnap_S
 [315]
 layer=76
 scene=1
-frame=10031,10054,10377
+frame=10031,10056,10377
 [315.0]
 effect.name=テキスト
 サイズ=12.00
@@ -10912,7 +10914,7 @@ effect.name=PixelSnap_S
 [317]
 layer=77
 scene=1
-frame=795,894
+frame=795,893
 [317.0]
 effect.name=図形
 図形の種類=背景
@@ -10940,7 +10942,7 @@ Z軸回転=0.00
 [318]
 layer=77
 scene=1
-frame=895,1092
+frame=894,1092
 [318.0]
 effect.name=図形
 図形の種類=背景
@@ -10968,7 +10970,7 @@ Z軸回転=0.00
 [319]
 layer=77
 scene=1
-frame=1193,1292
+frame=1192,1291
 [319.0]
 effect.name=図形
 図形の種類=背景
@@ -10996,7 +10998,7 @@ Z軸回転=0.00
 [320]
 layer=77
 scene=1
-frame=1293,1490
+frame=1292,1489
 [320.0]
 effect.name=図形
 図形の種類=背景
@@ -11108,7 +11110,7 @@ Z軸回転=0.00
 [324]
 layer=77
 scene=1
-frame=3579,3676
+frame=3576,3674
 [324.0]
 effect.name=図形
 図形の種類=背景
@@ -11136,7 +11138,7 @@ Z軸回転=0.00
 [325]
 layer=77
 scene=1
-frame=3677,3774
+frame=3675,3773
 [325.0]
 effect.name=図形
 図形の種類=背景
@@ -11164,7 +11166,7 @@ Z軸回転=0.00
 [326]
 layer=77
 scene=1
-frame=3973,4024
+frame=3973,4022
 [326.0]
 effect.name=図形
 図形の種類=背景
@@ -11192,7 +11194,7 @@ Z軸回転=0.00
 [327]
 layer=77
 scene=1
-frame=4025,4071
+frame=4023,4071
 [327.0]
 effect.name=図形
 図形の種類=背景
@@ -11220,7 +11222,7 @@ Z軸回転=0.00
 [328]
 layer=77
 scene=1
-frame=4072,4269
+frame=4072,4270
 [328.0]
 effect.name=図形
 図形の種類=背景
@@ -11388,7 +11390,7 @@ Z軸回転=0.00
 [334]
 layer=77
 scene=1
-frame=5264,5363
+frame=5264,5362
 [334.0]
 effect.name=図形
 図形の種類=背景
@@ -11416,7 +11418,7 @@ Z軸回転=0.00
 [335]
 layer=77
 scene=1
-frame=5466,5563
+frame=5463,5561
 [335.0]
 effect.name=図形
 図形の種類=背景
@@ -11444,7 +11446,7 @@ Z軸回転=0.00
 [336]
 layer=77
 scene=1
-frame=5564,5661
+frame=5562,5660
 [336.0]
 effect.name=図形
 図形の種類=背景
@@ -11472,7 +11474,7 @@ Z軸回転=0.00
 [337]
 layer=77
 scene=1
-frame=5662,5759
+frame=5661,5759
 [337.0]
 effect.name=図形
 図形の種類=背景
@@ -11500,7 +11502,7 @@ Z軸回転=0.00
 [338]
 layer=77
 scene=1
-frame=7947,8044
+frame=7945,8044
 [338.0]
 effect.name=図形
 図形の種類=背景
@@ -11528,7 +11530,7 @@ Z軸回転=0.00
 [339]
 layer=77
 scene=1
-frame=8045,8145
+frame=8045,8143
 [339.0]
 effect.name=図形
 図形の種類=背景
@@ -11556,7 +11558,7 @@ Z軸回転=0.00
 [340]
 layer=77
 scene=1
-frame=8346,8443
+frame=8343,8441
 [340.0]
 effect.name=図形
 図形の種類=背景
@@ -11584,7 +11586,7 @@ Z軸回転=0.00
 [341]
 layer=77
 scene=1
-frame=8444,8541
+frame=8442,8540
 [341.0]
 effect.name=図形
 図形の種類=背景
@@ -11612,7 +11614,7 @@ Z軸回転=0.00
 [342]
 layer=77
 scene=1
-frame=8643,8691
+frame=8640,8689
 [342.0]
 effect.name=図形
 図形の種類=背景
@@ -11640,7 +11642,7 @@ Z軸回転=0.00
 [343]
 layer=77
 scene=1
-frame=8692,8741
+frame=8690,8739
 [343.0]
 effect.name=図形
 図形の種類=背景
@@ -11668,7 +11670,7 @@ Z軸回転=0.00
 [344]
 layer=77
 scene=1
-frame=8742,8788
+frame=8740,8788
 [344.0]
 effect.name=図形
 図形の種類=背景
@@ -11724,7 +11726,7 @@ Z軸回転=0.00
 [346]
 layer=77
 scene=1
-frame=8839,8891
+frame=8839,8888
 [346.0]
 effect.name=図形
 図形の種類=背景
@@ -11752,7 +11754,7 @@ Z軸回転=0.00
 [347]
 layer=77
 scene=1
-frame=9139,9238
+frame=9137,9235
 [347.0]
 effect.name=図形
 図形の種類=背景
@@ -11780,7 +11782,7 @@ Z軸回転=0.00
 [348]
 layer=77
 scene=1
-frame=9239,9335
+frame=9236,9335
 [348.0]
 effect.name=図形
 図形の種類=背景
@@ -11808,7 +11810,7 @@ Z軸回転=0.00
 [349]
 layer=77
 scene=1
-frame=9437,9536
+frame=9435,9533
 [349.0]
 effect.name=図形
 図形の種類=背景
@@ -11836,7 +11838,7 @@ Z軸回転=0.00
 [350]
 layer=77
 scene=1
-frame=9537,9633
+frame=9534,9633
 [350.0]
 effect.name=図形
 図形の種類=背景
@@ -11864,7 +11866,7 @@ Z軸回転=0.00
 [351]
 layer=77
 scene=1
-frame=9634,9733
+frame=9634,9732
 [351.0]
 effect.name=図形
 図形の種類=背景
@@ -11920,7 +11922,7 @@ Z軸回転=0.00
 [353]
 layer=77
 scene=1
-frame=10031,10131
+frame=10031,10129
 [353.0]
 effect.name=図形
 図形の種類=背景
@@ -11976,7 +11978,7 @@ Z軸回転=0.00
 [355]
 layer=77
 scene=1
-frame=10329,10429
+frame=10329,10427
 [355.0]
 effect.name=図形
 図形の種類=背景
@@ -12004,7 +12006,7 @@ Z軸回転=0.00
 [356]
 layer=78
 scene=1
-frame=820,919
+frame=820,918
 [356.0]
 effect.name=図形
 図形の種類=背景
@@ -12032,7 +12034,7 @@ Z軸回転=0.00
 [357]
 layer=78
 scene=1
-frame=1242,1341
+frame=1242,1340
 [357.0]
 effect.name=図形
 図形の種類=背景
@@ -12060,7 +12062,7 @@ Z軸回転=0.00
 [358]
 layer=78
 scene=1
-frame=1638,1737
+frame=1639,1737
 [358.0]
 effect.name=図形
 図形の種類=背景
@@ -12088,7 +12090,7 @@ Z軸回転=0.00
 [359]
 layer=78
 scene=1
-frame=3628,3726
+frame=3625,3724
 [359.0]
 effect.name=図形
 図形の種類=背景
@@ -12116,7 +12118,7 @@ Z軸回転=0.00
 [360]
 layer=78
 scene=1
-frame=4420,4520
+frame=4420,4518
 [360.0]
 effect.name=図形
 図形の種類=背景
@@ -12144,7 +12146,7 @@ Z軸回転=0.00
 [361]
 layer=78
 scene=1
-frame=5214,5312
+frame=5214,5313
 [361.0]
 effect.name=図形
 図形の種類=背景
@@ -12172,7 +12174,7 @@ Z軸回転=0.00
 [362]
 layer=78
 scene=1
-frame=5515,5613
+frame=5512,5611
 [362.0]
 effect.name=図形
 図形の種類=背景
@@ -12200,7 +12202,7 @@ Z軸回転=0.00
 [363]
 layer=78
 scene=1
-frame=5614,5661
+frame=5612,5660
 [363.0]
 effect.name=図形
 図形の種類=背景
@@ -12228,7 +12230,7 @@ Z軸回転=0.00
 [364]
 layer=78
 scene=1
-frame=6360,6455
+frame=6356,6455
 [364.0]
 effect.name=図形
 図形の種類=背景
@@ -12256,7 +12258,7 @@ Z軸回転=0.00
 [365]
 layer=78
 scene=1
-frame=7996,8094
+frame=7995,8093
 [365.0]
 effect.name=図形
 図形の種類=背景
@@ -12284,7 +12286,7 @@ Z軸回転=0.00
 [366]
 layer=78
 scene=1
-frame=8395,8493
+frame=8392,8491
 [366.0]
 effect.name=図形
 図形の種類=背景
@@ -12340,7 +12342,7 @@ Z軸回転=0.00
 [368]
 layer=78
 scene=1
-frame=9189,9287
+frame=9187,9285
 [368.0]
 effect.name=図形
 図形の種類=背景
@@ -12368,7 +12370,7 @@ Z軸回転=0.00
 [369]
 layer=78
 scene=1
-frame=9488,9585
+frame=9485,9583
 [369.0]
 effect.name=図形
 図形の種類=背景
@@ -12396,7 +12398,7 @@ Z軸回転=0.00
 [370]
 layer=78
 scene=1
-frame=9982,10084
+frame=9981,10079
 [370.0]
 effect.name=図形
 図形の種類=背景
@@ -12452,7 +12454,7 @@ Z軸回転=0.00
 [372]
 layer=78
 scene=1
-frame=10378,10476
+frame=10378,10477
 [372.0]
 effect.name=図形
 図形の種類=背景
@@ -12480,7 +12482,7 @@ Z軸回転=0.00
 [373]
 layer=79
 scene=1
-frame=844,943
+frame=845,943
 [373.0]
 effect.name=図形
 図形の種類=背景
@@ -12508,7 +12510,7 @@ Z軸回転=0.00
 [374]
 layer=79
 scene=1
-frame=5614,5662
+frame=5612,5660
 [374.0]
 effect.name=図形
 図形の種類=背景
@@ -12536,7 +12538,7 @@ Z軸回転=0.00
 [375]
 layer=79
 scene=1
-frame=6408,6507
+frame=6406,6504
 [375.0]
 effect.name=図形
 図形の種類=背景
@@ -12592,7 +12594,7 @@ Z軸回転=0.00
 [377]
 layer=79
 scene=1
-frame=9586,9633
+frame=9584,9633
 [377.0]
 effect.name=フレームバッファ
 アルファチャンネルを維持=1
@@ -12624,7 +12626,7 @@ Group=1
 [379]
 layer=80
 scene=1
-frame=846,894
+frame=845,893
 [379.0]
 effect.name=図形
 図形の種類=背景
@@ -12652,7 +12654,7 @@ Z軸回転=0.00
 [380]
 layer=80
 scene=1
-frame=1640,1688
+frame=1639,1688
 [380.0]
 effect.name=図形
 図形の種類=背景
@@ -12736,7 +12738,7 @@ Z軸回転=0.00
 [383]
 layer=80
 scene=1
-frame=9586,9633
+frame=9584,9633
 [383.0]
 effect.name=BlockGlitch_Rh
 サイズ=1000
@@ -12761,7 +12763,7 @@ effect.name=BlockGlitch_Rh
 [384]
 layer=80
 scene=1
-frame=10381,10576
+frame=10378,10576
 [384.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -12780,7 +12782,7 @@ PI=
 [385]
 layer=81
 scene=1
-frame=9585,9633
+frame=9584,9633
 [385.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -12799,7 +12801,7 @@ PI=
 [386]
 layer=81
 scene=1
-frame=10382,10576
+frame=10378,10576
 [386.0]
 effect.name=BlockGlitch_Rh
 サイズ=1000
@@ -13357,6 +13359,291 @@ Z軸回転=0.00
 合成モード=通常
 音量=100.00
 左右=0.00
+[scene.7]
+scene=7
+name=Jacket
+video.width=360
+video.height=360
+video.rate=60
+video.scale=1
+audio.rate=44100
+cursor.frame=2
+cursor.layer=13
+preview.frame=0
+display.frame=0
+display.layer=0
+display.zoom=100000
+display.order=7
+display.camera=
+display.grid.x=16,-16
+display.grid.y=16,-16
+display.grid.width=200
+display.grid.height=200
+display.grid.step=200.000000
+display.grid.range=10000.000000
+display.tempo.bpm=72.500000
+display.tempo.beat=8
+display.tempo.offset=0.000000
+[401]
+layer=1
+scene=7
+frame=0,80
+[401.0]
+effect.name=画像ファイル
+ファイル=E:\aviutl2_projects\20260218_6oclock_koto\clipboard.aux2\clipboard_20260225_164938.webp
+表示番号=0,0,再生範囲,0
+再生速度=100.00
+ループ再生=0
+連番ファイル=0
+[401.1]
+effect.name=標準描画
+X=0.00
+Y=0.00
+Z=0.00
+Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+拡大率=100.000
+縦横比=0.000
+透明度=0.00
+合成モード=通常
+[402]
+layer=2
+scene=7
+frame=0,8
+[402.0]
+effect.name=画像ファイル
+ファイル=E:\aviutl2_projects\20260218_6oclock_koto\clipboard.aux2\clipboard_20260225_170228.webp
+表示番号=0,0,再生範囲,0
+再生速度=100.00
+ループ再生=0
+連番ファイル=0
+[402.1]
+effect.name=標準描画
+X=0.00
+Y=0.00
+Z=0.00
+Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+拡大率=100.000
+縦横比=0.000
+透明度=0.00
+合成モード=通常
+[402.2]
+effect.name=クリッピング
+上=0
+下=0
+左=209
+右=209
+中心の位置を変更=0
+[403]
+layer=5
+scene=7
+frame=0,80
+[403.0]
+effect.name=テキスト
+サイズ=24.00
+字間=1.00
+行間=0.00
+表示速度=0.00
+フォント=x12y12pxMaruMinya
+文字色=ffffff
+影・縁色=000000
+文字装飾=標準文字
+文字揃え=中央揃え[中]
+B=0
+I=0
+テキスト=六時、 <#ff6497>言<#>の<#4fb3d7>葉<#>の木の下で。
+文字毎に個別オブジェクト=0
+自動スクロール=0
+移動座標上に表示=0
+オブジェクトの長さを自動調節=0
+[403.1]
+effect.name=標準描画
+X=0.00
+Y=-120.00
+Z=0.00
+Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+拡大率=100.000
+縦横比=0.000
+透明度=0.00
+合成モード=通常
+[403.2]
+effect.name=AutoClipping_S
+αしきい値=0.00
+中心の位置を変更=1
+上余白=0
+下余白=0
+左余白=0
+右余白=0
+上除去=1
+下除去=1
+左除去=1
+右除去=1
+PI=
+[403.3]
+effect.name=PixelSnap_S
+[403.4]
+effect.name=ドロップシャドウ
+X=0
+Y=0
+濃さ=100.0
+拡散=2
+影色=251c06
+影を別オブジェクトで描画=0
+[404]
+layer=6
+scene=7
+focus=1
+frame=0,80
+[404.0]
+effect.name=テキスト
+サイズ=16.00
+字間=1.00
+行間=0.00
+表示速度=0.00
+フォント=美咲ゴシック
+文字色=ffffff
+影・縁色=000000
+文字装飾=標準文字
+文字揃え=中央揃え[中]
+B=0
+I=0
+テキスト=琴葉<#ff6497>茜<#>、琴葉<#4fb3d7>葵<#> | 名無し。
+文字毎に個別オブジェクト=0
+自動スクロール=0
+移動座標上に表示=0
+オブジェクトの長さを自動調節=0
+[404.1]
+effect.name=標準描画
+X=0.00
+Y=120.00
+Z=0.00
+Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+拡大率=100.000
+縦横比=0.000
+透明度=0.00
+合成モード=通常
+[404.2]
+effect.name=AutoClipping_S
+αしきい値=0.00
+中心の位置を変更=1
+上余白=0
+下余白=0
+左余白=0
+右余白=0
+上除去=1
+下除去=1
+左除去=1
+右除去=1
+PI=
+[404.3]
+effect.name=PixelSnap_S
+[404.4]
+effect.name=ドロップシャドウ
+X=0
+Y=0
+濃さ=100.0
+拡散=2
+影色=251c06
+影を別オブジェクトで描画=0
+[scene.8]
+scene=8
+name=Scaled Jacket
+video.width=3000
+video.height=3000
+video.rate=60
+video.scale=1
+audio.rate=44100
+output.file=E:\aviutl2_projects\20260218_6oclock_koto\jacket3.png
+cursor.frame=0
+cursor.layer=0
+preview.frame=0
+display.frame=0
+display.layer=0
+display.zoom=10000
+display.order=8
+display.camera=
+display.grid.x=16,-16
+display.grid.y=16,-16
+display.grid.width=200
+display.grid.height=200
+display.grid.step=200.000000
+display.grid.range=10000.000000
+display.tempo.bpm=145.000000
+display.tempo.beat=8
+display.tempo.offset=0.000000
+[405]
+layer=0
+scene=8
+frame=0,80
+[405.0]
+effect.name=シーン
+再生位置=0.000,1.350,再生範囲,0
+再生速度=100.00
+シーン=7
+ループ再生=0
+[405.1]
+effect.name=映像再生
+X=0.00
+Y=0.00
+Z=0.00
+Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+拡大率=100.000
+縦横比=0.000
+透明度=0.00
+合成モード=通常
+音量=100.00
+左右=0.00
+[406]
+layer=1
+scene=8
+focus=1
+frame=0,80
+[406.0]
+effect.name=ドット絵変形
+中心X=0.00
+中心Y=0.00
+X拡大率=833.333
+Y拡大率=833.333
+回転（度）=0.0
+発展補間=0
+線の太さ=1.00
+斜め補間=1:1 + 1:2（補正）
+基準色=ffffff
+補間閾値=16
+高度な設定.hide=1
+透明グリッド=0
+ピクセル補正=中心移動式
+デバッグモード=0
+PI=
 [plugin.0]
 plugin.name=rusty_local_alias
 alias_entries=--aviutl2-rs:serde-rmp-v1:1

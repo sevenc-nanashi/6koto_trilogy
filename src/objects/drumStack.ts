@@ -7,7 +7,7 @@ import { useRenderingContext } from "../utils/useRenderingContext";
 import { clip, easeOutQuint, lerp } from "../utils/ease";
 
 export const height = 270;
-export const size = 19;
+export const size = 18;
 const padding = 10;
 export const width = size * 2 + padding * 2;
 const beatsPerMeasure = 8;
@@ -123,11 +123,13 @@ export function drawDrumStack(
       const xOffset = cell.measureOffset * measureColumnOffset;
       const opacity = cell.measureOffset === -1 ? lastMeasureOpacity : 1;
       p.translate(
-        Math.floor(ctx.mainCanvas.width - size / 2 + xOffset),
-        ctx.mainCanvas.height -
-          cell.beatInMeasure * (size + padding) -
-          size / 2 -
-          padding,
+        Math.floor(ctx.mainCanvas.width - size / 2 + xOffset) - 0.5,
+        Math.floor(
+          ctx.mainCanvas.height -
+            cell.beatInMeasure * (size + padding) -
+            size / 2 -
+            padding,
+        ) + 0.5,
       );
       const sliceIndex = bestGrid?.slots[index] ?? index;
       clipToSlice(p, sliceIndex, sliceCount, size / 2 + 2);

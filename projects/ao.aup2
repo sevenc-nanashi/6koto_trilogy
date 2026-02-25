@@ -1,7 +1,7 @@
 [project]
-version=2003300
+version=2003400
 file=E:\aviutl2_projects\20260218_6oclock_koto\ao2.aup2
-display.scene=0
+display.scene=3
 preview.scene=0
 [scene.0]
 scene=0
@@ -12,8 +12,8 @@ video.rate=60
 video.scale=1
 audio.rate=44100
 output.file=E:\aviutl2_projects\20260218_6oclock_koto\dist\ao_thumbnail.png
-cursor.frame=7249
-cursor.layer=1
+cursor.frame=0
+cursor.layer=9
 preview.frame=340
 display.frame=0
 display.layer=0
@@ -79,7 +79,7 @@ frame=100,497,894,1292,1689,2086,2483,3278,3674,4072,4469,4867,5264,5661,6058,64
 [1.0]
 effect.name=Aoi Chords
 Index=0,1,2,3,4,5,5,6,7,2,3,2,8,4,9,10,5,6,5,11,15,0,瞬間移動,0
-Batch Size=10
+Batch Size=0
 Freeze=0
 [1.1]
 effect.name=標準描画
@@ -106,12 +106,12 @@ video.rate=60
 video.scale=1
 audio.rate=44100
 output.file=E:\aviutl2_projects\20260218_6oclock_koto\dist\ao_thumbnail
-cursor.frame=7071
-cursor.layer=38
+cursor.frame=3767
+cursor.layer=41
 preview.frame=0
-display.frame=5241
-display.layer=35
-display.zoom=1000
+display.frame=2730
+display.layer=25
+display.zoom=4000
 display.order=1
 display.camera=-658.381714,-267.100616,-737.405457,0.000000,0.000000,0.000000
 display.grid.x=16,-16
@@ -138,6 +138,8 @@ effect.name=音声ファイル
 effect.name=音声再生
 音量=100.00
 左右=0.00
+[2.2]
+effect.name=quantizer.aux2対象外
 [3]
 layer=1
 scene=1
@@ -178,7 +180,7 @@ Group=1
 [4]
 layer=2
 scene=1
-frame=7549,8443
+frame=7548,8441
 [4.0]
 effect.name=フィルタオブジェクト
 [4.1]
@@ -187,6 +189,7 @@ ID=2
 動作モード=入力
 透明度=0.00
 合成モード=通常
+背景クリア=0
 src=
 dst=
 [5]
@@ -249,7 +252,7 @@ Group=1
 [7]
 layer=4
 scene=1
-frame=6803,7647
+frame=6803,7646
 [7.0]
 effect.name=図形
 図形の種類=円
@@ -295,12 +298,13 @@ ID=1
 動作モード=入力
 透明度=0.00
 合成モード=通常
+背景クリア=0
 src=
 dst=
 [9]
 layer=5
 scene=1
-frame=6803,7647
+frame=6803,7646
 [9.0]
 effect.name=フィルタオブジェクト
 [9.1]
@@ -309,6 +313,7 @@ ID=1
 動作モード=入力
 透明度=0.00
 合成モード=通常
+背景クリア=0
 src=
 dst=
 [10]
@@ -381,7 +386,7 @@ effect.name=手ぶれ
 [15]
 layer=9
 scene=1
-frame=2034,2879
+frame=2036,2879
 [15.0]
 effect.name=画像ファイル
 ファイル=E:\aviutl2_projects\20260218_6oclock_koto\clipboard.aux2\clipboard_20260220_223944.webp
@@ -468,7 +473,7 @@ PI=
 [17]
 layer=9
 scene=1
-frame=6803,8443
+frame=6803,8441
 [17.0]
 effect.name=画像ファイル
 ファイル=E:\aviutl2_projects\20260218_6oclock_koto\clipboard.aux2\clipboard_20260220_223622.webp
@@ -513,7 +518,7 @@ PI=
 [18]
 layer=10
 scene=1
-frame=6855,7053
+frame=6853,7051
 [18.0]
 effect.name=色調補正@Basic_S
 明るさ=150.00,100.00,直線移動(時間制御),0|0.749769,1,0.615182,0
@@ -545,7 +550,7 @@ Group=1
 [20]
 layer=11
 scene=1
-frame=6805,8441
+frame=6803,8441
 [20.0]
 effect.name=フレームバッファ
 アルファチャンネルを維持=1
@@ -852,7 +857,7 @@ effect.name=Rusty Pixel Sort Filter
 [38]
 layer=14
 scene=1
-frame=4417,4468
+frame=4420,4468
 [38.0]
 effect.name=Rusty Pixel Sort Filter
 しきい値=1.000,0.000,直線移動(時間制御),0|0.36938,1,0.241527,0
@@ -880,7 +885,7 @@ PI=
 [40]
 layer=14
 scene=1
-frame=7598,7647
+frame=7598,7646
 [40.0]
 effect.name=RadRotDirBlur_S
 移動X=0.00
@@ -970,6 +975,7 @@ ID=1
 動作モード=出力
 透明度=0.00
 合成モード=通常
+背景クリア=0
 src=
 dst=
 [43.4]
@@ -1014,6 +1020,7 @@ ID=2
 動作モード=出力
 透明度=0.00
 合成モード=通常
+背景クリア=0
 src=
 dst=
 [44.4]
@@ -1058,6 +1065,7 @@ ID=1
 動作モード=出力
 透明度=0.00
 合成モード=通常
+背景クリア=0
 src=
 dst=
 [45.4]
@@ -1102,6 +1110,7 @@ ID=1
 動作モード=出力
 透明度=0.00
 合成モード=通常
+背景クリア=0
 src=
 dst=
 [46.4]
@@ -1111,7 +1120,7 @@ effect.name=モザイク
 [47]
 layer=16
 scene=1
-frame=6791,6851
+frame=6791,6852
 [47.0]
 effect.name=図形
 図形の種類=円
@@ -1283,7 +1292,7 @@ Z軸回転=0.00
 [52]
 layer=17
 scene=1
-frame=4468,5263
+frame=4469,5263
 [52.0]
 effect.name=画像ファイル
 ファイル=E:\aviutl2_projects\20260218_6oclock_koto\clipboard.aux2\clipboard_20260220_223507.webp
@@ -1310,10 +1319,10 @@ Z軸回転=0.00
 [53]
 layer=17
 scene=1
-frame=5264,6058
+frame=5264,6057
 [53.0]
 effect.name=画像ファイル
-ファイル=E:\aviutl2_projects\20260218_6oclock_koto\clipboard.aux2\clipboard_20260220_224902.webp
+ファイル=E:\aviutl2_projects\20260218_6oclock_koto\clipboard.aux2\clipboard_20260224_174956.webp
 表示番号=0,0,再生範囲,0
 再生速度=100.00
 ループ再生=0
@@ -1374,7 +1383,7 @@ Group=1
 [55]
 layer=17
 scene=1
-frame=8392,8440
+frame=8392,8441
 [55.0]
 effect.name=BlockGlitch_Rh
 サイズ=1000
@@ -1424,7 +1433,7 @@ effect.name=モザイク
 [57]
 layer=18
 scene=1
-frame=4469,6058
+frame=4469,6057
 [57.0]
 effect.name=PixelSnap_S
 [57.1]
@@ -1483,10 +1492,10 @@ effect.name=Rusty Pixel Sort Filter
 [61]
 layer=19
 scene=1
-frame=5960,6058
+frame=5959,6057
 [61.0]
 effect.name=Rusty Pixel Sort Filter
-しきい値=1.000,0.000,直線移動(時間制御),0|0.940617,0,0.124285,0.146996
+しきい値=1.000,0.000,直線移動(時間制御),0|0.527155,0.476395,0.440791,0.091202
 ソート対象=しきい値以上
 ソート方向=左右
 [62]
@@ -1512,12 +1521,28 @@ Group=1
 X軸回転=0.00
 Y軸回転=0.00
 Z軸回転=0.00
-拡大率=75.000
+拡大率=100.000
 縦横比=0.000
 透明度=0.00
 合成モード=通常
 [62.2]
 effect.name=PixelSnap_S
+[62.3]
+effect.name=ドット絵変形
+中心X=0.00
+中心Y=0.00
+X拡大率=75.000
+Y拡大率=75.000
+回転（度）=0.0
+発展補間=1
+線の太さ=1.50
+斜め補間=1:1 + 1:2（補正）
+基準色=315056
+補間閾値=16
+透明グリッド=0
+ピクセル補正=中心移動式
+デバッグモード=0
+PI=
 [63]
 layer=20
 scene=1
@@ -1665,7 +1690,7 @@ effect.name=直角回転@Basic_S
 中心の位置を変更=0
 [67.4]
 effect.name=座標
-X=-309.00
+X=-302.00
 Y=34.00
 Z=0.00
 Group=1
@@ -1678,7 +1703,7 @@ frame=100,471
 [68.0]
 effect.name=Ao Drum Stack
 Color=b8fbff
-Batch Size=10
+Batch Size=0
 Freeze=0
 [68.1]
 effect.name=標準描画
@@ -1705,7 +1730,7 @@ frame=497,1291
 [69.0]
 effect.name=Ao Drum Stack
 Color=b8fbff
-Batch Size=10
+Batch Size=0
 Freeze=1
 [69.1]
 effect.name=標準描画
@@ -1732,7 +1757,7 @@ frame=1292,2035
 [70.0]
 effect.name=Ao Drum Stack
 Color=b8fbff
-Batch Size=10
+Batch Size=0
 Freeze=0
 [70.1]
 effect.name=標準描画
@@ -1759,7 +1784,7 @@ frame=2086,3674
 [71.0]
 effect.name=Ao Drum Stack
 Color=b8fbff
-Batch Size=10
+Batch Size=0
 Freeze=0
 [71.1]
 effect.name=標準描画
@@ -1786,7 +1811,7 @@ frame=3675,4468
 [72.0]
 effect.name=Ao Drum Stack
 Color=b8fbff
-Batch Size=10
+Batch Size=0
 Freeze=0
 [72.1]
 effect.name=標準描画
@@ -1809,11 +1834,11 @@ effect.name=PixelSnap_S
 [73]
 layer=22
 scene=1
-frame=4469,6058
+frame=4469,6057
 [73.0]
 effect.name=Ao Drum Stack
 Color=b8fbff
-Batch Size=10
+Batch Size=0
 Freeze=1
 [73.1]
 effect.name=標準描画
@@ -1836,11 +1861,11 @@ effect.name=PixelSnap_S
 [74]
 layer=22
 scene=1
-frame=6059,7646
+frame=6058,7646
 [74.0]
 effect.name=Ao Drum Stack
 Color=b8fbff
-Batch Size=10
+Batch Size=0
 Freeze=0
 [74.1]
 effect.name=標準描画
@@ -1867,7 +1892,7 @@ frame=7647,8441
 [75.0]
 effect.name=Ao Drum Stack
 Color=b8fbff
-Batch Size=10
+Batch Size=0
 Freeze=0
 [75.1]
 effect.name=標準描画
@@ -1896,7 +1921,7 @@ frame=0,100,471
 effect.name=Ao Chorus Center Square
 Circle Progress=0.000,1.000,1.000,区間ごとに時間制御@Basic_S,0|0.894534,0,0.071862,0.304721
 Activate=1
-Batch Size=10
+Batch Size=0
 Freeze=0
 [76.1]
 effect.name=標準描画
@@ -1922,7 +1947,7 @@ frame=2036,4468
 effect.name=Ao Chorus Center Square
 Circle Progress=1.000
 Activate=1
-Batch Size=10
+Batch Size=0
 Freeze=0
 [77.1]
 effect.name=標準描画
@@ -1948,7 +1973,7 @@ frame=6058,8441
 effect.name=Ao Chorus Center Square
 Circle Progress=1.000
 Activate=1
-Batch Size=10
+Batch Size=0
 Freeze=0
 [78.1]
 effect.name=標準描画
@@ -2017,8 +2042,10 @@ Swing Measure Factor=4
 Swing Override=1,-1,-1,瞬間移動,0
 Body Swing=0,-1,-1,瞬間移動,0
 Eye Open=0,1,0,瞬間移動,0
-Batch Size=10
-Freeze=1
+Koto Mode=0
+Shut=0
+Batch Size=0
+Freeze=0
 [80.1]
 effect.name=標準描画
 X=0.00
@@ -2038,7 +2065,7 @@ Z軸回転=0.00
 [81]
 layer=25
 scene=1
-frame=2036,2061,2086,2781,2806,2831,3576,3600,3626,3674
+frame=2036,2061,2086,2781,2806,2831,3576,3600,3625,3674
 [81.0]
 effect.name=SwingAoi
 Swing=1
@@ -2047,7 +2074,9 @@ Swing Measure Factor=4,4,4,2,2,4,4,4,4,4,瞬間移動,0
 Swing Override=0,1,-1,0,-1,-1,0,1,-1,-1,瞬間移動,0
 Body Swing=1,0,-1,1,0,-1,1,0,-1,-1,瞬間移動,0
 Eye Open=0,0,1,0,0,1,0,0,0,0,瞬間移動,0
-Batch Size=10
+Koto Mode=0
+Shut=0
+Batch Size=0
 Freeze=0
 [81.1]
 effect.name=標準描画
@@ -2068,7 +2097,7 @@ Z軸回転=0.00
 [82]
 layer=25
 scene=1
-frame=6058,6431,6436,6456,6754,6803,6853,7549,7598,7646
+frame=6058,6431,6436,6456,6754,6803,6853,7548,7598,7646
 [82.0]
 effect.name=SwingAoi
 Swing=1
@@ -2077,8 +2106,10 @@ Swing Measure Factor=1,1,1,4,2,4,4,2,4,4,瞬間移動,0
 Swing Override=-1,0,-1,-1,-1,-1,-1,-1,-1,-1,瞬間移動,0
 Body Swing=0,0,0,0,0,-1,-1,0,-1,-1,瞬間移動,0
 Eye Open=0,1,1,1,0,1,1,0,0,0,瞬間移動,0
-Batch Size=10
-Freeze=1
+Koto Mode=0
+Shut=0
+Batch Size=0
+Freeze=0
 [82.1]
 effect.name=標準描画
 X=0.00
@@ -2248,8 +2279,7 @@ PI=
 [86]
 layer=27
 scene=1
-frame=6431,8440
-group=3
+frame=6431,8441
 [86.0]
 effect.name=パス図形σ@Path_S
 ライン幅=2.00
@@ -2451,8 +2481,7 @@ effect.name=直角回転@Basic_S
 [89]
 layer=28
 scene=1
-frame=6431,8440
-group=3
+frame=6431,8441
 [89.0]
 effect.name=パス図形σ@Path_S
 ライン幅=2.00
@@ -2658,8 +2687,7 @@ effect.name=直角回転@Basic_S
 [92]
 layer=29
 scene=1
-frame=6431,8440
-group=3
+frame=6431,8441
 [92.0]
 effect.name=パス図形σ@Path_S
 ライン幅=2.00
@@ -2865,8 +2893,7 @@ effect.name=直角回転@Basic_S
 [95]
 layer=30
 scene=1
-frame=6431,8440
-group=3
+frame=6431,8441
 [95.0]
 effect.name=パス図形σ@Path_S
 ライン幅=2.00
@@ -2954,7 +2981,7 @@ PI=
 [97]
 layer=31
 scene=1
-frame=5712,6058
+frame=5711,6057
 [97.0]
 effect.name=フィルタオブジェクト
 [97.1]
@@ -2984,7 +3011,7 @@ Group=1
 [99]
 layer=32
 scene=1
-frame=1242,1341
+frame=1242,1340
 [99.0]
 effect.name=図形
 図形の種類=背景
@@ -3012,7 +3039,7 @@ Z軸回転=0.00
 [100]
 layer=33
 scene=1
-frame=472,570
+frame=472,571
 [100.0]
 effect.name=図形
 図形の種類=背景
@@ -3040,7 +3067,7 @@ Z軸回転=0.00
 [101]
 layer=33
 scene=1
-frame=1193,1291
+frame=1192,1291
 [101.0]
 effect.name=図形
 図形の種類=背景
@@ -3312,7 +3339,7 @@ effect.name=PixelSnap_S
 [108]
 layer=36
 scene=1
-frame=932,1130
+frame=932,1129
 [108.0]
 effect.name=テキスト
 サイズ=14.00
@@ -3352,7 +3379,7 @@ effect.name=PixelSnap_S
 [109]
 layer=36
 scene=1
-frame=1131,1291
+frame=1130,1291
 [109.0]
 effect.name=テキスト
 サイズ=14.00
@@ -3552,7 +3579,7 @@ effect.name=PixelSnap_S
 [114]
 layer=36
 scene=1
-frame=2086,2259,2879
+frame=2086,2260,2879
 [114.0]
 effect.name=テキスト
 サイズ=14.00
@@ -3592,7 +3619,7 @@ effect.name=PixelSnap_S
 [115]
 layer=36
 scene=1
-frame=2880,3053,3674
+frame=2880,3054,3674
 [115.0]
 effect.name=テキスト
 サイズ=14.00
@@ -3952,7 +3979,7 @@ effect.name=PixelSnap_S
 [124]
 layer=36
 scene=1
-frame=6058,6231,6430
+frame=6058,6232,6430
 [124.0]
 effect.name=テキスト
 サイズ=14.00
@@ -4032,7 +4059,7 @@ effect.name=PixelSnap_S
 [126]
 layer=36
 scene=1
-frame=6853,7026,7597
+frame=6853,7027,7597
 [126.0]
 effect.name=テキスト
 サイズ=14.00
@@ -4114,7 +4141,7 @@ Group=1
 [129]
 layer=37
 scene=1
-frame=671,720
+frame=671,719
 [129.0]
 effect.name=座標
 X=-2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -4124,7 +4151,7 @@ Group=1
 [130]
 layer=37
 scene=1
-frame=931,980
+frame=932,980
 [130.0]
 effect.name=座標
 X=-2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -4134,7 +4161,7 @@ Group=1
 [131]
 layer=37
 scene=1
-frame=1131,1180
+frame=1130,1179
 [131.0]
 effect.name=座標
 X=-2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -4144,7 +4171,7 @@ Group=1
 [132]
 layer=37
 scene=1
-frame=1292,1341
+frame=1292,1340
 [132.0]
 effect.name=座標
 X=-2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -4174,7 +4201,7 @@ Group=1
 [135]
 layer=37
 scene=1
-frame=1862,1911
+frame=1863,1911
 [135.0]
 effect.name=座標
 X=-2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -4284,7 +4311,7 @@ Group=1
 [140]
 layer=37
 scene=1
-frame=4903,4952
+frame=4904,4953
 [140.0]
 effect.name=座標
 X=-2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -4294,7 +4321,7 @@ Group=1
 [141]
 layer=37
 scene=1
-frame=5103,5152
+frame=5103,5151
 [141.0]
 effect.name=座標
 X=-2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -4314,7 +4341,7 @@ Group=1
 [143]
 layer=37
 scene=1
-frame=5438,5487
+frame=5438,5486
 [143.0]
 effect.name=座標
 X=-2.00,0.00,直線移動(時間制御),0|0.22,1,0.64,0
@@ -4801,8 +4828,8 @@ Z軸回転=0.00
 effect.name=ドット絵変形
 中心X=-3.00
 中心Y=0.00
-X拡大率=200.000
-Y拡大率=200.000
+X拡大率=100.000
+Y拡大率=100.000
 回転（度）=0.0
 発展補間=0
 線の太さ=1.00
@@ -4833,7 +4860,7 @@ scene=1
 frame=1937,2085
 [158.0]
 effect.name=Aoi Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [158.1]
 effect.name=標準描画
@@ -4854,10 +4881,10 @@ Z軸回転=0.00
 [159]
 layer=44
 scene=1
-frame=2385,2580
+frame=2384,2582
 [159.0]
 effect.name=Aoi Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [159.1]
 effect.name=標準描画
@@ -4878,10 +4905,10 @@ Z軸回転=0.00
 [160]
 layer=44
 scene=1
-frame=2782,2954
+frame=2781,2954
 [160.0]
 effect.name=Aoi Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [160.1]
 effect.name=標準描画
@@ -4902,10 +4929,10 @@ Z軸回転=0.00
 [161]
 layer=44
 scene=1
-frame=3179,3374
+frame=3178,3376
 [161.0]
 effect.name=Aoi Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [161.1]
 effect.name=標準描画
@@ -4929,7 +4956,7 @@ scene=1
 frame=3576,3674
 [162.0]
 effect.name=Aoi Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [162.1]
 effect.name=標準描画
@@ -4950,11 +4977,11 @@ Z軸回転=0.00
 [163]
 layer=44
 scene=1
-frame=4369,4468
+frame=4370,4468
 camera=0
 [163.0]
 effect.name=Aoi Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [163.1]
 effect.name=標準描画
@@ -4979,7 +5006,7 @@ frame=5140,5313
 camera=0
 [164.0]
 effect.name=Aoi Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [164.1]
 effect.name=標準描画
@@ -5000,11 +5027,11 @@ Z軸回転=0.00
 [165]
 layer=44
 scene=1
-frame=5958,6057
+frame=5959,6057
 camera=0
 [165.0]
 effect.name=Aoi Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [165.1]
 effect.name=標準描画
@@ -5028,7 +5055,7 @@ scene=1
 frame=6754,6852
 [166.0]
 effect.name=Aoi Accent Phrase
-Batch Size=10
+Batch Size=0
 Freeze=0
 [166.1]
 effect.name=標準描画
@@ -5047,11 +5074,59 @@ Z軸回転=0.00
 透明度=0.00
 合成モード=通常
 [167]
+layer=44
+scene=1
+frame=7151,7348
+[167.0]
+effect.name=Aoi Accent Phrase
+Batch Size=0
+Freeze=0
+[167.1]
+effect.name=標準描画
+X=0.00
+Y=0.00
+Z=0.00
+Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+拡大率=100.000
+縦横比=0.000
+透明度=0.00
+合成モード=通常
+[168]
+layer=44
+scene=1
+frame=7548,7646
+[168.0]
+effect.name=Aoi Accent Phrase
+Batch Size=0
+Freeze=0
+[168.1]
+effect.name=標準描画
+X=0.00
+Y=0.00
+Z=0.00
+Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+拡大率=100.000
+縦横比=0.000
+透明度=0.00
+合成モード=通常
+[169]
 layer=45
 scene=1
-frame=6010,6058
+frame=6009,6057
 camera=0
-[167.0]
+[169.0]
 effect.name=シネマスコープ
 中心X=0.0
 中心Y=0.0
@@ -5071,7 +5146,7 @@ effect.name=シネマスコープ
 2_中心Y=0.0
 2_角度=0.00
 2_幅=0.0
-[167.1]
+[169.1]
 effect.name=標準描画
 X=0.00
 Y=0.00
@@ -5087,11 +5162,11 @@ Z軸回転=0.00
 縦横比=0.000
 透明度=0.00
 合成モード=通常
-[168]
+[170]
 layer=47
 scene=1
 frame=1242,1291
-[168.0]
+[170.0]
 effect.name=図形
 図形の種類=背景
 サイズ=100
@@ -5099,7 +5174,7 @@ effect.name=図形
 ライン幅=4000
 色=ffffff
 角を丸くする=0
-[168.1]
+[170.1]
 effect.name=標準描画
 X=0.00
 Y=0.00
@@ -5115,184 +5190,77 @@ Z軸回転=0.00
 縦横比=0.000
 透明度=100.00,0.00,直線移動(時間制御),0|1,0,0,0.404506
 合成モード=通常
-[169]
-layer=47
-scene=1
-frame=3675,4468
-[169.0]
-effect.name=グループ制御
-X=0.00
-Y=0.00
-Z=0.00
-Group=1
-X軸回転=0.00
-Y軸回転=0.00
-Z軸回転=0.00
-拡大率=100.000
-対象レイヤー数=2
-[169.1]
-effect.name=ドロップシャドウ
-X=0
-Y=0
-濃さ=100.0
-拡散=2
-影色=185860
-影を別オブジェクトで描画=0
-[170]
-layer=47
-scene=1
-frame=7647,8440
-[170.0]
-effect.name=グループ制御
-X=0.00
-Y=0.00
-Z=0.00
-Group=1
-X軸回転=0.00
-Y軸回転=0.00
-Z軸回転=0.00
-拡大率=100.000
-対象レイヤー数=2
-[170.1]
-effect.name=ドロップシャドウ
-X=0
-Y=0
-濃さ=100.0
-拡散=2
-影色=185860
-影を別オブジェクトで描画=0
 [171]
-layer=48
+layer=47
 scene=1
 frame=3675,4468
 [171.0]
-effect.name=テキスト
-サイズ=12.00
-字間=1.00
-行間=0.00
-表示速度=0.00
-フォント=x12y12pxMaruMinya
-文字色=ffffff
-影・縁色=000000
-文字装飾=標準文字
-文字揃え=右寄せ[中]
-B=0
-I=0
-テキスト=<#4fb3d7>蒼<#>の少女は午前六時を目指して
-文字毎に個別オブジェクト=0
-自動スクロール=0
-移動座標上に表示=0
-オブジェクトの長さを自動調節=0
+effect.name=グループ制御
+X=0.00
+Y=0.00
+Z=0.00
+Group=1
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+拡大率=100.000
+対象レイヤー数=2
 [171.1]
-effect.name=標準描画
-X=280.00
-Y=0.00
-Z=0.00
-Group=1
-中心X=0.00
-中心Y=0.00
-中心Z=0.00
-X軸回転=0.00
-Y軸回転=0.00
-Z軸回転=0.00
-拡大率=100.000
-縦横比=0.000
-透明度=0.00
-合成モード=通常
-[171.2]
-effect.name=AutoClipping_S
-αしきい値=0.00
-中心の位置を変更=1
-上余白=0
-下余白=0
-左余白=0
-右余白=0
-上除去=1
-下除去=1
-左除去=1
-右除去=1
-PI=
-[171.3]
-effect.name=PixelSnap_S
+effect.name=ドロップシャドウ
+X=0
+Y=0
+濃さ=100.0
+拡散=2
+影色=185860
+影を別オブジェクトで描画=0
 [172]
-layer=48
+layer=47
 scene=1
-focus=1
-frame=7647,8440
+frame=7647,8441
 [172.0]
-effect.name=テキスト
-サイズ=12.00
-字間=1.00
-行間=0.00
-表示速度=0.00
-フォント=x12y12pxMaruMinya
-文字色=ffffff
-影・縁色=000000
-文字装飾=標準文字
-文字揃え=右寄せ[中]
-B=0
-I=0
-テキスト=<#4fb3d7>蒼<#>の少女は午前六時を目指して
-文字毎に個別オブジェクト=0
-自動スクロール=0
-移動座標上に表示=0
-オブジェクトの長さを自動調節=0
-[172.1]
-effect.name=標準描画
-X=280.00
+effect.name=グループ制御
+X=0.00
 Y=0.00
 Z=0.00
 Group=1
-中心X=0.00
-中心Y=0.00
-中心Z=0.00
 X軸回転=0.00
 Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
-縦横比=0.000
-透明度=0.00
-合成モード=通常
-[172.2]
-effect.name=AutoClipping_S
-αしきい値=0.00
-中心の位置を変更=1
-上余白=0
-下余白=0
-左余白=0
-右余白=0
-上除去=1
-下除去=1
-左除去=1
-右除去=1
-PI=
-[172.3]
-effect.name=PixelSnap_S
+対象レイヤー数=2
+[172.1]
+effect.name=ドロップシャドウ
+X=0
+Y=0
+濃さ=100.0
+拡散=2
+影色=185860
+影を別オブジェクトで描画=0
 [173]
-layer=49
+layer=48
 scene=1
 frame=3675,4468
 [173.0]
 effect.name=テキスト
 サイズ=12.00
 字間=1.00
-行間=4.00
+行間=0.00
 表示速度=0.00
 フォント=x12y12pxMaruMinya
 文字色=ffffff
 影・縁色=000000
 文字装飾=標準文字
-文字揃え=左寄せ[中]
+文字揃え=右寄せ[中]
 B=0
 I=0
-テキスト=Timestamp: 2026/02/21\n\nThe Vocaloid Collection\n2026 Winter / Exhibition
+テキスト=<#4fb3d7>蒼<#>の少女は午前六時を目指して
 文字毎に個別オブジェクト=0
 自動スクロール=0
 移動座標上に表示=0
 オブジェクトの長さを自動調節=0
 [173.1]
 effect.name=標準描画
-X=-280.00
+X=280.00
 Y=0.00
 Z=0.00
 Group=1
@@ -5322,30 +5290,30 @@ PI=
 [173.3]
 effect.name=PixelSnap_S
 [174]
-layer=49
+layer=48
 scene=1
-frame=7647,7845
+frame=7647,8441
 [174.0]
 effect.name=テキスト
-サイズ=8.00
+サイズ=12.00
 字間=1.00
-行間=4.00
+行間=0.00
 表示速度=0.00
-フォント=美咲ゴシック
+フォント=x12y12pxMaruMinya
 文字色=ffffff
 影・縁色=000000
 文字装飾=標準文字
-文字揃え=左寄せ[中]
+文字揃え=右寄せ[中]
 B=0
 I=0
-テキスト=<s12,x12y12pxMaruMinya>- FX -<s>\n Vital\n\n<s12,x12y12pxMaruMinya>- Vocal Backing -<s>\n Vital \n\n<s12,x12y12pxMaruMinya>- Accent Phrases -<s>\n Vital, The Bells \n\n<s12,x12y12pxMaruMinya>- Arpeggiator -<s>\n Vital \n\n<s12,x12y12pxMaruMinya>- Chords -<s>\n Keyzone Classic, LABS, Vital \n\n<s12,x12y12pxMaruMinya>- Bass -<s>\n Vital \n
+テキスト=<#4fb3d7>蒼<#>の少女は午前六時を目指して
 文字毎に個別オブジェクト=0
 自動スクロール=0
 移動座標上に表示=0
 オブジェクトの長さを自動調節=0
 [174.1]
 effect.name=標準描画
-X=-280.00
+X=280.00
 Y=0.00
 Z=0.00
 Group=1
@@ -5377,21 +5345,22 @@ effect.name=PixelSnap_S
 [175]
 layer=49
 scene=1
-frame=7846,8044
+focus=1
+frame=3675,4468
 [175.0]
 effect.name=テキスト
-サイズ=8.00
+サイズ=12.00
 字間=1.00
 行間=4.00
 表示速度=0.00
-フォント=美咲ゴシック
+フォント=x12y12pxMaruMinya
 文字色=ffffff
 影・縁色=000000
 文字装飾=標準文字
 文字揃え=左寄せ[中]
 B=0
 I=0
-テキスト=<s12,x12y12pxMaruMinya>- Extra Melody -<s>\n MONSTER Whistle\n\n<s12,x12y12pxMaruMinya>- Drums -<s>\n RVK-808, SI-Drum Kit, \n\n Cymatics Odyssey Kick, \n BVKER - 909 Kit, \n Free Roland 808 Drum Kit, \n w/ Sitala \n\n<s12,x12y12pxMaruMinya>- One Shots -<s>\n Keyzone Classic 
+テキスト=Timestamp: 2026/02/21\nRevised at: 2026/02/26\n\nThe Vocaloid Collection\n2026 Winter / Exhibition
 文字毎に個別オブジェクト=0
 自動スクロール=0
 移動座標上に表示=0
@@ -5430,7 +5399,7 @@ effect.name=PixelSnap_S
 [176]
 layer=49
 scene=1
-frame=8045,8342
+frame=7647,7845
 [176.0]
 effect.name=テキスト
 サイズ=8.00
@@ -5444,7 +5413,7 @@ effect.name=テキスト
 文字揃え=左寄せ[中]
 B=0
 I=0
-テキスト=<s12,x12y12pxMaruMinya>- Music -\n Nanashi.<s>\n Reaper v7.34, TuneLab b6b452d \n\n<s12,x12y12pxMaruMinya>- Movie -\n Nanashi.<s>\n AviUtl2 beta33, vi5.js \n\n<s12,x12y12pxMaruMinya>- Illustration -\n Nanashi.<s>\n Procreate, Adobe Photoshop, \n Clip Studio Paint, ibis Paint X  \n + Nano Banana, ChatGPT  \n\n<s12,x12y12pxMaruMinya>- Vocal -\n Kotonoha Aoi <s>\n Neutrino Tau v3.0.4.stable, \n Model v3.1.4  
+テキスト=<s12,x12y12pxMaruMinya>- FX -<s>\n Vital\n\n<s12,x12y12pxMaruMinya>- Vocal Backing -<s>\n Vital \n\n<s12,x12y12pxMaruMinya>- Accent Phrases -<s>\n Vital, The Bells \n\n<s12,x12y12pxMaruMinya>- Arpeggiator -<s>\n Vital \n\n<s12,x12y12pxMaruMinya>- Chords -<s>\n Keyzone Classic, LABS, Vital \n\n<s12,x12y12pxMaruMinya>- Bass -<s>\n Vital \n
 文字毎に個別オブジェクト=0
 自動スクロール=0
 移動座標上に表示=0
@@ -5483,7 +5452,7 @@ effect.name=PixelSnap_S
 [177]
 layer=49
 scene=1
-frame=8343,8442
+frame=7846,8044
 [177.0]
 effect.name=テキスト
 サイズ=8.00
@@ -5497,7 +5466,7 @@ effect.name=テキスト
 文字揃え=左寄せ[中]
 B=0
 I=0
-テキスト=The <#4fb3d7>second<#> Fragment of the Story.
+テキスト=<s12,x12y12pxMaruMinya>- Extra Melody -<s>\n MONSTER Whistle, Synth1\n\n<s12,x12y12pxMaruMinya>- Drums -<s>\n RVK-808, SI-Drum Kit, \n\n Cymatics Odyssey Kick, \n BVKER - 909 Kit, \n Free Roland 808 Drum Kit, \n w/ Sitala \n\n<s12,x12y12pxMaruMinya>- One Shots -<s>\n Keyzone Classic 
 文字毎に個別オブジェクト=0
 自動スクロール=0
 移動座標上に表示=0
@@ -5534,20 +5503,30 @@ PI=
 [177.3]
 effect.name=PixelSnap_S
 [178]
-layer=50
+layer=49
 scene=1
-frame=100,198
+frame=8045,8342
 [178.0]
-effect.name=図形
-図形の種類=背景
-サイズ=100
-縦横比=0.00
-ライン幅=4000
-色=ffffff
-角を丸くする=0
+effect.name=テキスト
+サイズ=8.00
+字間=1.00
+行間=4.00
+表示速度=0.00
+フォント=美咲ゴシック
+文字色=ffffff
+影・縁色=000000
+文字装飾=標準文字
+文字揃え=左寄せ[中]
+B=0
+I=0
+テキスト=<s12,x12y12pxMaruMinya>- Music -\n Nanashi.<s>\n Reaper v7.34, TuneLab b6b452d \n\n<s12,x12y12pxMaruMinya>- Movie -\n Nanashi.<s>\n AviUtl2 beta34, vi5.js \n\n<s12,x12y12pxMaruMinya>- Illustration -\n Nanashi.<s>\n Procreate, Adobe Photoshop, \n Clip Studio Paint, ibis Paint X  \n + Nano Banana, ChatGPT  \n\n<s12,x12y12pxMaruMinya>- Vocal -\n Kotonoha Aoi <s>\n Neutrino Tau v3.0.4.stable, \n Model v3.1.4  
+文字毎に個別オブジェクト=0
+自動スクロール=0
+移動座標上に表示=0
+オブジェクトの長さを自動調節=0
 [178.1]
 effect.name=標準描画
-X=0.00
+X=-280.00
 Y=0.00
 Z=0.00
 Group=1
@@ -5559,23 +5538,48 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=0.00,100.00,直線移動(時間制御),0|0.18633,1,0.197111,0.237124
+透明度=0.00
 合成モード=通常
+[178.2]
+effect.name=AutoClipping_S
+αしきい値=0.00
+中心の位置を変更=1
+上余白=0
+下余白=0
+左余白=0
+右余白=0
+上除去=1
+下除去=1
+左除去=1
+右除去=1
+PI=
+[178.3]
+effect.name=PixelSnap_S
 [179]
-layer=50
+layer=49
 scene=1
-frame=2086,2184
+frame=8343,8441
 [179.0]
-effect.name=図形
-図形の種類=背景
-サイズ=100
-縦横比=0.00
-ライン幅=4000
-色=ffffff
-角を丸くする=0
+effect.name=テキスト
+サイズ=8.00
+字間=1.00
+行間=4.00
+表示速度=0.00
+フォント=美咲ゴシック
+文字色=ffffff
+影・縁色=000000
+文字装飾=標準文字
+文字揃え=左寄せ[中]
+B=0
+I=0
+テキスト=The <#4fb3d7>second<#> Fragment of the Story.
+文字毎に個別オブジェクト=0
+自動スクロール=0
+移動座標上に表示=0
+オブジェクトの長さを自動調節=0
 [179.1]
 effect.name=標準描画
-X=0.00
+X=-280.00
 Y=0.00
 Z=0.00
 Group=1
@@ -5587,12 +5591,27 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=0.00,100.00,直線移動(時間制御),0|0.18633,1,0.197111,0.237124
+透明度=0.00
 合成モード=通常
+[179.2]
+effect.name=AutoClipping_S
+αしきい値=0.00
+中心の位置を変更=1
+上余白=0
+下余白=0
+左余白=0
+右余白=0
+上除去=1
+下除去=1
+左除去=1
+右除去=1
+PI=
+[179.3]
+effect.name=PixelSnap_S
 [180]
 layer=50
 scene=1
-frame=2385,2482
+frame=100,198
 [180.0]
 effect.name=図形
 図形の種類=背景
@@ -5615,12 +5634,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
+透明度=0.00,100.00,直線移動(時間制御),0|0.18633,1,0.197111,0.237124
 合成モード=通常
 [181]
 layer=50
 scene=1
-frame=2483,2580
+frame=2086,2184
 [181.0]
 effect.name=図形
 図形の種類=背景
@@ -5643,12 +5662,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
+透明度=0.00,100.00,直線移動(時間制御),0|0.18633,1,0.197111,0.237124
 合成モード=通常
 [182]
 layer=50
 scene=1
-frame=2782,2830
+frame=2384,2482
 [182.0]
 effect.name=図形
 図形の種類=背景
@@ -5676,7 +5695,7 @@ Z軸回転=0.00
 [183]
 layer=50
 scene=1
-frame=2831,2879
+frame=2483,2582
 [183.0]
 effect.name=図形
 図形の種類=背景
@@ -5704,7 +5723,7 @@ Z軸回転=0.00
 [184]
 layer=50
 scene=1
-frame=3179,3276
+frame=2781,2830
 [184.0]
 effect.name=図形
 図形の種類=背景
@@ -5732,7 +5751,7 @@ Z軸回転=0.00
 [185]
 layer=50
 scene=1
-frame=3277,3374
+frame=2831,2879
 [185.0]
 effect.name=図形
 図形の種類=背景
@@ -5760,7 +5779,7 @@ Z軸回転=0.00
 [186]
 layer=50
 scene=1
-frame=3576,3624
+frame=3178,3277
 [186.0]
 effect.name=図形
 図形の種類=背景
@@ -5783,12 +5802,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=0.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
+透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [187]
 layer=50
 scene=1
-frame=3625,3674
+frame=3278,3376
 [187.0]
 effect.name=図形
 図形の種類=背景
@@ -5811,12 +5830,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=0.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
+透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [188]
 layer=50
 scene=1
-frame=3974,4071
+frame=3576,3624
 [188.0]
 effect.name=図形
 図形の種類=背景
@@ -5839,12 +5858,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
+透明度=0.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [189]
 layer=50
 scene=1
-frame=4072,4169
+frame=3625,3674
 [189.0]
 effect.name=図形
 図形の種類=背景
@@ -5867,12 +5886,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
+透明度=0.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [190]
 layer=50
 scene=1
-frame=4272,4369
+frame=3973,4071
 [190.0]
 effect.name=図形
 図形の種類=背景
@@ -5900,7 +5919,7 @@ Z軸回転=0.00
 [191]
 layer=50
 scene=1
-frame=4370,4467
+frame=4072,4171
 [191.0]
 effect.name=図形
 図形の種類=背景
@@ -5928,7 +5947,7 @@ Z軸回転=0.00
 [192]
 layer=50
 scene=1
-frame=6754,6851
+frame=4271,4369
 [192.0]
 effect.name=図形
 図形の種類=背景
@@ -5956,7 +5975,7 @@ Z軸回転=0.00
 [193]
 layer=50
 scene=1
-frame=6852,6949
+frame=4370,4468
 [193.0]
 effect.name=図形
 図形の種類=背景
@@ -5984,7 +6003,7 @@ Z軸回転=0.00
 [194]
 layer=50
 scene=1
-frame=7152,7249
+frame=6754,6852
 [194.0]
 effect.name=図形
 図形の種類=背景
@@ -6012,7 +6031,7 @@ Z軸回転=0.00
 [195]
 layer=50
 scene=1
-frame=7250,7347
+frame=6853,6951
 [195.0]
 effect.name=図形
 図形の種類=背景
@@ -6040,7 +6059,7 @@ Z軸回転=0.00
 [196]
 layer=50
 scene=1
-frame=7449,7497
+frame=7151,7249
 [196.0]
 effect.name=図形
 図形の種類=背景
@@ -6063,12 +6082,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=25.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
+透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [197]
 layer=50
 scene=1
-frame=7498,7547
+frame=7250,7348
 [197.0]
 effect.name=図形
 図形の種類=背景
@@ -6096,7 +6115,7 @@ Z軸回転=0.00
 [198]
 layer=50
 scene=1
-frame=7548,7597
+frame=7449,7497
 [198.0]
 effect.name=図形
 図形の種類=背景
@@ -6119,12 +6138,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=0.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
+透明度=25.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [199]
 layer=50
 scene=1
-frame=7598,7646
+frame=7498,7547
 [199.0]
 effect.name=図形
 図形の種類=背景
@@ -6147,12 +6166,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=0.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
+透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [200]
 layer=50
 scene=1
-frame=7647,7697
+frame=7548,7597
 [200.0]
 effect.name=図形
 図形の種類=背景
@@ -6180,7 +6199,7 @@ Z軸回転=0.00
 [201]
 layer=50
 scene=1
-frame=7945,8044
+frame=7598,7646
 [201.0]
 effect.name=図形
 図形の種類=背景
@@ -6203,12 +6222,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
+透明度=0.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [202]
 layer=50
 scene=1
-frame=8045,8141
+frame=7647,7696
 [202.0]
 effect.name=図形
 図形の種類=背景
@@ -6231,12 +6250,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
+透明度=0.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [203]
 layer=50
 scene=1
-frame=8243,8342
+frame=7945,8044
 [203.0]
 effect.name=図形
 図形の種類=背景
@@ -6264,7 +6283,7 @@ Z軸回転=0.00
 [204]
 layer=50
 scene=1
-frame=8343,8440
+frame=8045,8143
 [204.0]
 effect.name=図形
 図形の種類=背景
@@ -6290,9 +6309,9 @@ Z軸回転=0.00
 透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [205]
-layer=51
+layer=50
 scene=1
-frame=2434,2532
+frame=8243,8342
 [205.0]
 effect.name=図形
 図形の種類=背景
@@ -6318,9 +6337,9 @@ Z軸回転=0.00
 透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [206]
-layer=51
+layer=50
 scene=1
-frame=3228,3326
+frame=8343,8441
 [206.0]
 effect.name=図形
 図形の種類=背景
@@ -6348,7 +6367,7 @@ Z軸回転=0.00
 [207]
 layer=51
 scene=1
-frame=4023,4121
+frame=2434,2532
 [207.0]
 effect.name=図形
 図形の種類=背景
@@ -6376,7 +6395,7 @@ Z軸回転=0.00
 [208]
 layer=51
 scene=1
-frame=4321,4419
+frame=3228,3326
 [208.0]
 effect.name=図形
 図形の種類=背景
@@ -6404,7 +6423,7 @@ Z軸回転=0.00
 [209]
 layer=51
 scene=1
-frame=4420,4468
+frame=4023,4121
 [209.0]
 effect.name=図形
 図形の種類=背景
@@ -6427,12 +6446,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=0.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
+透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [210]
 layer=51
 scene=1
-frame=4469,4515
+frame=4320,4419
 [210.0]
 effect.name=図形
 図形の種類=背景
@@ -6455,12 +6474,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=0.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
+透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [211]
 layer=51
 scene=1
-frame=5166,5263
+frame=4420,4468
 [211.0]
 effect.name=図形
 図形の種類=背景
@@ -6483,12 +6502,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
+透明度=0.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [212]
 layer=51
 scene=1
-frame=6803,6901
+frame=4469,4518
 [212.0]
 effect.name=図形
 図形の種類=背景
@@ -6511,12 +6530,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
+透明度=0.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [213]
 layer=51
 scene=1
-frame=7201,7299
+frame=5165,5263
 [213.0]
 effect.name=図形
 図形の種類=背景
@@ -6544,7 +6563,7 @@ Z軸回転=0.00
 [214]
 layer=51
 scene=1
-frame=7599,7646
+frame=6803,6902
 [214.0]
 effect.name=図形
 図形の種類=背景
@@ -6567,12 +6586,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=100.00,0.00,直線移動(時間制御),0|0.960324,0,0.078083,0.520386
+透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [215]
 layer=51
 scene=1
-frame=7995,8093
+frame=7200,7299
 [215.0]
 effect.name=図形
 図形の種類=背景
@@ -6600,7 +6619,7 @@ Z軸回転=0.00
 [216]
 layer=51
 scene=1
-frame=8294,8391
+frame=7598,7646
 [216.0]
 effect.name=図形
 図形の種類=背景
@@ -6623,12 +6642,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
+透明度=100.00,0.00,直線移動(時間制御),0|0.960324,0,0.078083,0.520386
 合成モード=通常
 [217]
-layer=52
+layer=51
 scene=1
-frame=4420,4468
+frame=7995,8093
 [217.0]
 effect.name=図形
 図形の種類=背景
@@ -6651,12 +6670,12 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=100.00,0.00,直線移動(時間制御),0|0.748324,0,0.002779,0
+透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [218]
-layer=52
+layer=51
 scene=1
-frame=5214,5313
+frame=8293,8391
 [218.0]
 effect.name=図形
 図形の種類=背景
@@ -6684,7 +6703,7 @@ Z軸回転=0.00
 [219]
 layer=52
 scene=1
-frame=6805,6852
+frame=4420,4468
 [219.0]
 effect.name=図形
 図形の種類=背景
@@ -6707,28 +6726,40 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=100.00,0.00,直線移動(時間制御),0|0.960324,0,0.078083,0.520386
+透明度=100.00,0.00,直線移動(時間制御),0|0.748324,0,0.002779,0
 合成モード=通常
 [220]
 layer=52
 scene=1
-frame=8392,8441
+frame=5214,5313
 [220.0]
-effect.name=フレームバッファ
-アルファチャンネルを維持=1
-フレームバッファをクリア=0
+effect.name=図形
+図形の種類=背景
+サイズ=100
+縦横比=0.00
+ライン幅=4000
+色=ffffff
+角を丸くする=0
 [220.1]
-effect.name=基本出力
-X=0
-Y=0
+effect.name=標準描画
+X=0.00
+Y=0.00
+Z=0.00
 Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
 拡大率=100.000
-透明度=0.00
+縦横比=0.000
+透明度=50.00,100.00,直線移動(時間制御),0|0.446964,1,0.002779,0
 合成モード=通常
 [221]
-layer=53
+layer=52
 scene=1
-frame=3626,3674
+frame=6803,6852
 [221.0]
 effect.name=図形
 図形の種類=背景
@@ -6754,10 +6785,26 @@ Z軸回転=0.00
 透明度=100.00,0.00,直線移動(時間制御),0|0.960324,0,0.078083,0.520386
 合成モード=通常
 [222]
+layer=52
+scene=1
+frame=8392,8441
+[222.0]
+effect.name=フレームバッファ
+アルファチャンネルを維持=1
+フレームバッファをクリア=0
+[222.1]
+effect.name=基本出力
+X=0
+Y=0
+Group=1
+拡大率=100.000
+透明度=0.00
+合成モード=通常
+[223]
 layer=53
 scene=1
-frame=5216,5263
-[222.0]
+frame=3625,3674
+[223.0]
 effect.name=図形
 図形の種類=背景
 サイズ=100
@@ -6765,7 +6812,7 @@ effect.name=図形
 ライン幅=4000
 色=ffffff
 角を丸くする=0
-[222.1]
+[223.1]
 effect.name=標準描画
 X=0.00
 Y=0.00
@@ -6781,35 +6828,10 @@ Z軸回転=0.00
 縦横比=0.000
 透明度=100.00,0.00,直線移動(時間制御),0|0.960324,0,0.078083,0.520386
 合成モード=通常
-[223]
+[224]
 layer=53
 scene=1
-frame=8392,8428
-[223.0]
-effect.name=BlockGlitch_Rh
-サイズ=1000
-ズレ強度=200
-方向ズレ=200
-確率=100
-色ずれ.hide=1
-色ずれ量=0.0
-色ずれ角度=0.0
-色ずれ種類=1
-複雑度.hide=1
-複雑度=5
-複雑度.hide=1
-成長率=1.50
-減衰率=0.50
-追加Option.hide=1
-拡縮ズレ=0
-縦横比=0.00
-変化速度=2.0
-表示モード=デフォルト
-領域拡張=1
-[224]
-layer=54
-scene=1
-frame=2831,2879
+frame=5214,5263
 [224.0]
 effect.name=図形
 図形の種類=背景
@@ -6835,25 +6857,41 @@ Z軸回転=0.00
 透明度=100.00,0.00,直線移動(時間制御),0|0.960324,0,0.078083,0.520386
 合成モード=通常
 [225]
-layer=54
+layer=53
 scene=1
 frame=8392,8428
 [225.0]
-effect.name=Rusty Pixel Sort Filter
-しきい値=0.500,1.000,直線移動(時間制御),0|0.25,0.25,1,0
-ソート対象=しきい値以下
-ソート方向=上下
+effect.name=BlockGlitch_Rh
+サイズ=1000
+ズレ強度=200
+方向ズレ=200
+確率=100
+色ずれ.hide=1
+色ずれ量=0.0
+色ずれ角度=0.0
+色ずれ種類=1
+複雑度.hide=1
+複雑度=5
+複雑度.hide=1
+成長率=1.50
+減衰率=0.50
+追加Option.hide=1
+拡縮ズレ=0
+縦横比=0.00
+変化速度=2.0
+表示モード=デフォルト
+領域拡張=1
 [226]
-layer=55
+layer=54
 scene=1
-frame=8417,8428
+frame=2831,2879
 [226.0]
 effect.name=図形
 図形の種類=背景
 サイズ=100
 縦横比=0.00
 ライン幅=4000
-色=000000
+色=ffffff
 角を丸くする=0
 [226.1]
 effect.name=標準描画
@@ -6869,13 +6907,22 @@ Y軸回転=0.00
 Z軸回転=0.00
 拡大率=100.000
 縦横比=0.000
-透明度=100.00,0.00,直線移動(時間制御),0|0.263083,1,0.735895,0
+透明度=100.00,0.00,直線移動(時間制御),0|0.960324,0,0.078083,0.520386
 合成モード=通常
 [227]
+layer=54
+scene=1
+frame=8392,8428
+[227.0]
+effect.name=Rusty Pixel Sort Filter
+しきい値=0.500,1.000,直線移動(時間制御),0|0.25,0.25,1,0
+ソート対象=しきい値以下
+ソート方向=上下
+[228]
 layer=55
 scene=1
-frame=8429,8455
-[227.0]
+frame=8417,8428
+[228.0]
 effect.name=図形
 図形の種類=背景
 サイズ=100
@@ -6883,7 +6930,35 @@ effect.name=図形
 ライン幅=4000
 色=000000
 角を丸くする=0
-[227.1]
+[228.1]
+effect.name=標準描画
+X=0.00
+Y=0.00
+Z=0.00
+Group=1
+中心X=0.00
+中心Y=0.00
+中心Z=0.00
+X軸回転=0.00
+Y軸回転=0.00
+Z軸回転=0.00
+拡大率=100.000
+縦横比=0.000
+透明度=100.00,0.00,直線移動(時間制御),0|0.263083,1,0.735895,0
+合成モード=通常
+[229]
+layer=55
+scene=1
+frame=8429,8453
+[229.0]
+effect.name=図形
+図形の種類=背景
+サイズ=100
+縦横比=0.00
+ライン幅=4000
+色=000000
+角を丸くする=0
+[229.1]
 effect.name=標準描画
 X=0.00
 Y=0.00
@@ -6924,11 +6999,11 @@ display.grid.range=10000.000000
 display.tempo.bpm=580.000000
 display.tempo.beat=4
 display.tempo.offset=0.000000
-[228]
+[230]
 layer=2
 scene=2
 frame=0,173,744
-[228.0]
+[230.0]
 effect.name=テキスト
 サイズ=14.00
 字間=0.00
@@ -6946,7 +7021,7 @@ I=0
 自動スクロール=0
 移動座標上に表示=0
 オブジェクトの長さを自動調節=0
-[228.1]
+[230.1]
 effect.name=標準描画
 X=0.00
 Y=0.00
@@ -6962,13 +7037,13 @@ Z軸回転=0.00
 縦横比=0.000
 透明度=0.00,30.00,0.00,瞬間移動,0
 合成モード=通常
-[228.2]
+[230.2]
 effect.name=PixelSnap_S
-[229]
+[231]
 layer=3
 scene=2
 frame=174,397,744
-[229.0]
+[231.0]
 effect.name=テキスト
 サイズ=14.00
 字間=0.00
@@ -6986,7 +7061,7 @@ I=0
 自動スクロール=0
 移動座標上に表示=0
 オブジェクトの長さを自動調節=0
-[229.1]
+[231.1]
 effect.name=標準描画
 X=20.00
 Y=0.00
@@ -7002,13 +7077,13 @@ Z軸回転=0.00
 縦横比=0.000
 透明度=0.00,30.00,0.00,瞬間移動,0
 合成モード=通常
-[229.2]
+[231.2]
 effect.name=PixelSnap_S
-[230]
+[232]
 layer=4
 scene=2
 frame=397,571,744
-[230.0]
+[232.0]
 effect.name=テキスト
 サイズ=14.00
 字間=0.00
@@ -7026,7 +7101,7 @@ I=0
 自動スクロール=0
 移動座標上に表示=0
 オブジェクトの長さを自動調節=0
-[230.1]
+[232.1]
 effect.name=標準描画
 X=40.00
 Y=0.00
@@ -7042,14 +7117,14 @@ Z軸回転=0.00
 縦横比=0.000
 透明度=0.00,30.00,0.00,瞬間移動,0
 合成モード=通常
-[230.2]
+[232.2]
 effect.name=PixelSnap_S
-[231]
+[233]
 layer=5
 scene=2
 focus=1
 frame=571,744
-[231.0]
+[233.0]
 effect.name=テキスト
 サイズ=14.00
 字間=0.00
@@ -7067,7 +7142,7 @@ I=0
 自動スクロール=0
 移動座標上に表示=0
 オブジェクトの長さを自動調節=0
-[231.1]
+[233.1]
 effect.name=標準描画
 X=60.00
 Y=0.00
@@ -7083,7 +7158,7 @@ Z軸回転=0.00
 縦横比=0.000
 透明度=0.00
 合成モード=通常
-[231.2]
+[233.2]
 effect.name=PixelSnap_S
 [scene.3]
 scene=3
@@ -7094,12 +7169,12 @@ video.rate=60
 video.scale=1
 audio.rate=44100
 output.file=E:\aviutl2_projects\20260218_6oclock_koto\dist\ao_preview.mp4
-cursor.frame=1540
-cursor.layer=17
+cursor.frame=521
+cursor.layer=8
 preview.frame=0
-display.frame=0
+display.frame=691
 display.layer=0
-display.zoom=3000
+display.zoom=7500
 display.order=3
 display.camera=
 display.grid.x=16,-16
@@ -7111,20 +7186,20 @@ display.grid.range=10000.000000
 display.tempo.bpm=580.000000
 display.tempo.beat=4
 display.tempo.offset=0.000000
-[232]
+[234]
 layer=0
 scene=3
 frame=0,496
-[232.0]
+[234.0]
 effect.name=動画ファイル
 再生位置=0.000,8.284,再生範囲,0
 再生速度=100.00
-ファイル=E:\aviutl2_projects\20260218_6oclock_koto\dist\ao4.mkv
+ファイル=E:\aviutl2_projects\20260218_6oclock_koto\dist\ao5.mp4
 トラック=0
 ループ再生=0
 音声付き=1
 YUV=
-[232.1]
+[234.1]
 effect.name=映像再生
 X=0.00
 Y=0.00
@@ -7142,20 +7217,21 @@ Z軸回転=0.00
 合成モード=通常
 音量=100.00
 左右=0.00
-[233]
+[235]
 layer=1
 scene=3
+focus=1
 frame=472,2285,2482
-[233.0]
+[235.0]
 effect.name=動画ファイル
 再生位置=34.350,67.867,再生範囲,0
 再生速度=100.00
-ファイル=E:\aviutl2_projects\20260218_6oclock_koto\dist\ao4.mkv
+ファイル=E:\aviutl2_projects\20260218_6oclock_koto\dist\ao5.mp4
 トラック=0
 ループ再生=0
 音声付き=1
 YUV=
-[233.1]
+[235.1]
 effect.name=標準描画
 X=0.00
 Y=0.00
@@ -7171,11 +7247,11 @@ Z軸回転=0.00
 縦横比=0.000
 透明度=0.00
 合成モード=通常
-[234]
+[236]
 layer=2
 scene=3
 frame=447,471
-[234.0]
+[236.0]
 effect.name=動画ファイル
 再生位置=33.933,34.350,再生範囲,0
 再生速度=100.00
@@ -7184,7 +7260,7 @@ effect.name=動画ファイル
 ループ再生=0
 音声付き=1
 YUV=
-[234.1]
+[236.1]
 effect.name=標準描画
 X=0.00
 Y=0.00
@@ -7200,11 +7276,11 @@ Z軸回転=0.00
 縦横比=0.000
 透明度=100.00,0.00,直線移動,0
 合成モード=通常
-[235]
+[237]
 layer=2
 scene=3
 frame=2285,2482
-[235.0]
+[237.0]
 effect.name=図形
 図形の種類=背景
 サイズ=100
@@ -7212,7 +7288,7 @@ effect.name=図形
 ライン幅=4000
 色=000000
 角を丸くする=0
-[235.1]
+[237.1]
 effect.name=標準描画
 X=0.00
 Y=0.00
@@ -7228,12 +7304,11 @@ Z軸回転=0.00
 縦横比=0.000
 透明度=100.00,0.00,直線移動,0
 合成モード=通常
-[236]
+[238]
 layer=3
 scene=3
-focus=1
 frame=485,2285,2482
-[236.0]
+[238.0]
 effect.name=動画ファイル
 再生位置=34.567,67.867,再生範囲,0
 再生速度=100.00
@@ -7242,15 +7317,15 @@ effect.name=動画ファイル
 ループ再生=0
 音声付き=1
 YUV=
-[236.1]
+[238.1]
 effect.name=音声再生
 音量=100.00,100.00,0.00,直線移動,0
 左右=0.00
-[237]
+[239]
 layer=4
 scene=3
 frame=472,496
-[237.0]
+[239.0]
 effect.name=図形
 図形の種類=四角形
 サイズ=283
@@ -7258,7 +7333,7 @@ effect.name=図形
 ライン幅=4000
 色=000000
 角を丸くする=0
-[237.1]
+[239.1]
 effect.name=標準描画
 X=0.01
 Y=-466.57
@@ -7299,19 +7374,19 @@ display.grid.range=10000.000000
 display.tempo.bpm=145.000000
 display.tempo.beat=4
 display.tempo.offset=0.000000
-[238]
+[240]
 layer=0
 scene=4
 focus=1
 frame=0,80
-[238.0]
+[240.0]
 effect.name=画像ファイル
 ファイル=E:\aviutl2_projects\20260218_6oclock_koto\clipboard.aux2\clipboard_20260220_084930.webp
 表示番号=0,0,再生範囲,0
 再生速度=100.00
 ループ再生=0
 連番ファイル=0
-[238.1]
+[240.1]
 effect.name=標準描画
 X=0.00
 Y=0.00
@@ -7327,7 +7402,7 @@ Z軸回転=0.00
 縦横比=0.000
 透明度=0.00
 合成モード=通常
-[238.2]
+[240.2]
 effect.name=ドット絵変形
 中心X=0.00
 中心Y=0.00
@@ -7358,7 +7433,7 @@ preview.frame=0
 display.frame=7487
 display.layer=0
 display.zoom=7500
-display.order=6
+display.order=5
 display.camera=
 display.grid.x=16,-16
 display.grid.y=16,-16
@@ -7369,11 +7444,11 @@ display.grid.range=10000.000000
 display.tempo.bpm=290.000000
 display.tempo.beat=4
 display.tempo.offset=0.000000
-[239]
+[241]
 layer=0
 scene=5
 frame=0,8515
-[239.0]
+[241.0]
 effect.name=動画ファイル
 再生位置=0.000,141.934,再生範囲,0
 再生速度=100.00
@@ -7382,7 +7457,7 @@ effect.name=動画ファイル
 ループ再生=0
 音声付き=1
 YUV=
-[239.1]
+[241.1]
 effect.name=映像再生
 X=0.00
 Y=0.00
@@ -7400,12 +7475,12 @@ Z軸回転=0.00
 合成モード=通常
 音量=100.00
 左右=0.00
-[240]
+[242]
 layer=1
 scene=5
 focus=1
 frame=7532,7691
-[240.0]
+[242.0]
 effect.name=動画ファイル
 再生位置=0.000,2.667,再生範囲,0
 再生速度=100.00
@@ -7414,7 +7489,7 @@ effect.name=動画ファイル
 ループ再生=0
 音声付き=1
 YUV=
-[240.1]
+[242.1]
 effect.name=映像再生
 X=0.00
 Y=0.00

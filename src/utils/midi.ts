@@ -126,6 +126,7 @@ function createDrumPatterns(
   for (const pattern of map.values()) {
     patterns.push(pattern);
   }
+  patterns.sort((a, b) => a.ticks - b.ticks);
   return patterns;
 }
 

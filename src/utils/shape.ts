@@ -1,7 +1,8 @@
 import p5 from "p5";
 import { clip, unlerp } from "./ease";
 
-export function drawRotatedSquare(p: p5, size: number, progress = 1) {
+export function drawRotatedSquare(p: p5, rawSize: number, progress = 1) {
+  const size = Math.floor(rawSize);
   if (size <= 0) return;
   const topRightProgress = clip(unlerp(0, 0.25, progress));
   const bottomRightProgress = clip(unlerp(0.25, 0.5, progress));
